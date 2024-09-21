@@ -16,6 +16,7 @@
     "dependencies": {
         "pinia": "^2.1.7",
         "syafiq-portfolio-v2": "file:",
+        "vanilla-tilt": "^1.8.1",
         "vue": "^3.4.29",
         "vue-router": "^4.3.3"
     },
