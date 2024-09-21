@@ -1,10 +1,5 @@
 <script setup lang="ts">
 import TechnologyCard from "./TechnologyCard.vue";
-import TiltCard from "./TiltCard.vue";
-
-const hoverBorderColors = {
-    react: "hover:border-[#53c1deff] shadow-[#53c1deff]",
-};
 </script>
 
 <template>
