@@ -1,11 +1,14 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { markRaw, ref } from "vue";
 import IconGitHub from "../icons/IconGitHub.vue";
 import IconGmail from "../icons/IconGmail.vue";
 import IconLinkedIn from "../icons/IconLinkedIn.vue";
 import IconBox from "./IconBox.vue";
 
-const icons = ref([IconGitHub, IconGmail, IconLinkedIn]);
+const github = markRaw(IconGitHub);
+const gmail = markRaw(IconGmail);
+const linkedin = markRaw(IconLinkedIn);
+const icons = ref([github, gmail, linkedin]);
 </script>
 
 <template>
