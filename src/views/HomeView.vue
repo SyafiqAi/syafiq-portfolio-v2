@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SideContacts from "@/components/SideContacts.vue";
+import SideContacts from "@/components/SideContacts/SideContacts.vue";
 </script>
 
 <template>
@@ -39,7 +39,7 @@ import SideContacts from "@/components/SideContacts.vue";
 
 @media (prefers-reduced-motion: no-preference) {
     .gradient-animation {
-        animation: move-bg 8s linear infinite;
+        animation: move-bg 6s linear infinite;
     }
     @keyframes move-bg {
         to {
