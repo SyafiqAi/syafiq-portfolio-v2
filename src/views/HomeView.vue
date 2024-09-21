@@ -1,9 +1,51 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import SideContacts from "@/components/SideContacts.vue";
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+    <div>
+        <aside>
+            <SideContacts />
+        </aside>
+        <main>
+            <div class="flex items-center justify-center h-lvh">
+                <span class="font-extralight">Syafiq</span>
+                <div class="w-10" />
+                <span class="font-bold text-4xl gradient-animation"
+                    >Web Developer</span
+                >
+            </div>
+        </main>
+    </div>
 </template>
+
+<style scoped>
+.gradient-animation {
+    --bg-size: 400%;
+    --color-one: #fa3e00ff;
+    --color-two: #fc216dff;
+    --color-three: #ff04daff;
+    font-family: sans-serif;
+    background: linear-gradient(
+            90deg,
+            var(--color-one),
+            var(--color-two),
+            var(--color-three),
+            var(--color-one)
+        )
+        0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .gradient-animation {
+        animation: move-bg 8s linear infinite;
+    }
+    @keyframes move-bg {
+        to {
+            background-position: var(--bg-size) 0;
+        }
+    }
+}
+</style>
