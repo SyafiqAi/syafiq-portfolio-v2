@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import TechnologyCard from "./TechnologyCard.vue";
 import TiltCard from "./TiltCard.vue";
 
 const hoverBorderColors = {
@@ -7,54 +8,40 @@ const hoverBorderColors = {
 </script>
 
 <template>
-    <div
-        class="h-lvh font-extralight box-red flex items-center justify-center text-sm"
-    >
+    <div class="h-lvh font-extralight flex items-center justify-center text-sm">
         <div
             class="grid grid-rows-3 md:grid-rows-2 grid-cols-2 md:grid-cols-3 size-fit gap-x-20 md:gap-x-44 gap-y-20 md:gap-y-28"
         >
-            <div class="grid-item relative group">
-                <div
-                    class="shadow-xl shadow-[#53c1deff] group-hover:animate-pulse rounded-lg size-full absolute"
-                />
-                <TiltCard class="card" :class="hoverBorderColors.react">
-                    <img src="@/assets/logos/react-icon.svg" /> React
-                </TiltCard>
-            </div>
-            <div class="grid-item relative group">
-                <div
-                    class="shadow-xl shadow-[#4dba87ff] group-hover:animate-pulse rounded-lg size-full absolute"
-                />
-                <TiltCard class="card">
-                    <img src="@/assets/logos/vue-icon.svg" /> Vue
-                </TiltCard>
-            </div>
-            <div class="grid-item">
-                <TiltCard class="card hover:border-blue-500">
-                    typescript
-                </TiltCard>
-            </div>
-            <div class="grid-item">
-                <TiltCard class="card hover:border-green-500">
-                    nodejs
-                </TiltCard>
-            </div>
-            <div class="grid-item">
-                <TiltCard class="card hover:border-gray-800"> nextjs </TiltCard>
-            </div>
-            <div class="grid-item">
-                <TiltCard class="card hover:border-orange-500"> git </TiltCard>
-            </div>
+            <TechnologyCard
+                technology="Node.js"
+                src="src/assets/logos/node-icon.svg"
+                classname="shadow-[#8cc84bff]"
+            />
+            <TechnologyCard
+                technology="React"
+                src="src/assets/logos/react-icon.svg"
+                classname="shadow-[#53c1deff]"
+            />
+            <TechnologyCard
+                technology="Next.js"
+                src="src/assets/logos/next-icon.svg"
+                classname="shadow-white"
+            />
+            <TechnologyCard
+                technology="Git"
+                src="src/assets/logos/git-icon.svg"
+                classname="shadow-[#ee513bff]"
+            />
+            <TechnologyCard
+                technology="Vue"
+                src="src/assets/logos/vue-icon.svg"
+                classname="shadow-[#4dba87ff]"
+            />
+            <TechnologyCard
+                technology="TypeScript"
+                src="src/assets/logos/typescript-icon.svg"
+                classname="shadow-[#3178c6ff]"
+            />
         </div>
     </div>
 </template>
-
-<style scoped lang="postcss">
-.card {
-    @apply h-32 w-24 p-2 text-center align-text-bottom cursor-pointer transition-colors duration-300 rounded-md bg-neutral-900 flex flex-col justify-between;
-}
-
-.grid-item {
-    @apply flex justify-center items-center;
-}
-</style>
