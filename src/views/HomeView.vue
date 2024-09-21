@@ -1,7 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import SideContacts from "@/components/SideContacts.vue";
+</script>
 
 <template>
     <div>
+        <aside>
+            <SideContacts />
+        </aside>
         <main>
             <div class="flex items-center justify-center h-lvh select-none">
                 <span class="font-extralight">Syafiq</span>
