@@ -10,6 +10,8 @@ onMounted(() => {
         // max: 5,
         scale: 1.1,
         reverse: true,
+        glare: true,
+        "max-glare": 0.1,
     });
 });
 </script>
