@@ -3,12 +3,16 @@ import TheContacts from "./TheContacts.vue";
 </script>
 
 <template>
-    <div class="flex items-center justify-center h-lvh select-none flex-col">
-        <span class="font-extralight mb-2">Syafiq</span>
-        <span class="font-black text-4xl gradient-animation">
-            Web Developer
-        </span>
-        <TheContacts />
+    <div class="flex items-center justify-center h-svh select-none flex-col">
+        <div class="flex flex-col items-center group py-32">
+            <span class="font-extralight mb-2">Syafiq</span>
+            <h1
+                class="font-black text-4xl md:text-6xl lg:text-9xl text-nowrap max-w-[100lvw] gradient-animation"
+            >
+                Web Developer
+            </h1>
+            <TheContacts />
+        </div>
     </div>
 </template>
 <style scoped>
