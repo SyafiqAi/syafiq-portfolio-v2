@@ -4,7 +4,7 @@
     <div class="flex items-center justify-center h-lvh select-none">
         <span class="font-extralight">Syafiq</span>
         <div class="w-10" />
-        <span class="font-extralight text-4xl gradient-animation">
+        <span class="font-black text-4xl gradient-animation">
             Web Developer
         </span>
     </div>
