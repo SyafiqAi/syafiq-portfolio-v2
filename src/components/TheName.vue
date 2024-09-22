@@ -1,12 +1,21 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import IconBox from "./SideContacts/IconBox.vue";
+import IconGitHub from "./icons/IconGitHub.vue";
+import IconGmail from "./icons/IconGmail.vue";
+import IconLinkedIn from "./icons/IconLinkedIn.vue";
+</script>
 
 <template>
     <div class="flex items-center justify-center h-lvh select-none flex-col">
-        <span class="font-extralight">Syafiq</span>
-        <div class="w-10" />
+        <span class="font-extralight mb-2">Syafiq</span>
         <span class="font-black text-4xl gradient-animation">
             Web Developer
         </span>
+        <div class="font-extralight flex gap-10 mt-4">
+            <IconBox><IconLinkedIn /></IconBox>
+            <IconBox><IconGmail /></IconBox>
+            <IconBox><IconGitHub /></IconBox>
+        </div>
     </div>
 </template>
 <style scoped>
