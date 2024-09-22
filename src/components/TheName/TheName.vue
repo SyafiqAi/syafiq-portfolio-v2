@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import IconBox from "./SideContacts/IconBox.vue";
-import IconGitHub from "./icons/IconGitHub.vue";
-import IconGmail from "./icons/IconGmail.vue";
-import IconLinkedIn from "./icons/IconLinkedIn.vue";
+import IconBox from "../SideContacts/IconBox.vue";
+import IconGitHub from "../icons/IconGitHub.vue";
+import IconGmail from "../icons/IconGmail.vue";
+import IconLinkedIn from "../icons/IconLinkedIn.vue";
 </script>
 
 <template>

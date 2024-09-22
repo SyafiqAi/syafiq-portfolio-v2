@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import TheFooter from "@/components/TheFooter.vue";
-import TheName from "@/components/TheName.vue";
+import TheName from "@/components/TheName/TheName.vue";
 import TheTechnologies from "@/components/TheTechnologies/TheTechnologies.vue";
 </script>
 
