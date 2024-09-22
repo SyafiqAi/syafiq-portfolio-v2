@@ -32,7 +32,7 @@ onMounted(() => {
 
 <style scoped lang="postcss">
 .card {
-    @apply h-24 w-24 p-4 text-center align-text-bottom cursor-pointer transition-colors duration-300 rounded-xl bg-neutral-800 flex flex-col justify-between;
+    @apply h-24 w-24 p-4 text-center align-text-bottom transition-colors duration-300 rounded-xl bg-neutral-800 flex flex-col justify-between select-none;
 }
 
 .card-container {
