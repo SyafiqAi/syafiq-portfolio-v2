@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import IconBox from "../SideContacts/IconBox.vue";
-import IconGitHub from "../icons/IconGitHub.vue";
-import IconGmail from "../icons/IconGmail.vue";
-import IconLinkedIn from "../icons/IconLinkedIn.vue";
+import TheContacts from "./TheContacts.vue";
 </script>
 
 <template>
@@ -11,11 +8,7 @@ import IconLinkedIn from "../icons/IconLinkedIn.vue";
         <span class="font-black text-4xl gradient-animation">
             Web Developer
         </span>
-        <div class="font-extralight flex gap-10 mt-4">
-            <IconBox><IconLinkedIn /></IconBox>
-            <IconBox><IconGmail /></IconBox>
-            <IconBox><IconGitHub /></IconBox>
-        </div>
+        <TheContacts />
     </div>
 </template>
 <style scoped>
