@@ -6,10 +6,10 @@ import TheTechnologies from "@/components/TheTechnologies/TheTechnologies.vue";
 
 <template>
     <div>
+        <main class="relative">
         <aside>
             <SideContacts />
         </aside>
-        <main>
             <TheName />
             <TheTechnologies />
         </main>

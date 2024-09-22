@@ -12,14 +12,16 @@ const icons = ref([github, gmail, linkedin]);
 </script>
 
 <template>
-    <div class="fixed h-lvh items-center flex">
-        <div
-            class="flex flex-col gap-6 ml-4 opacity-50 hover:opacity-100 transition-opacity duration-200 pr-44"
-        >
-            <div v-for="(Icon, index) in icons" :key="index">
-                <IconBox>
-                    <component :is="Icon" />
-                </IconBox>
+    <div class="absolute h-full">
+        <div class="sticky top-0 h-lvh items-center flex">
+            <div
+                class="flex flex-col gap-6 ml-4 opacity-50 hover:opacity-100 transition-opacity duration-200 pr-44"
+            >
+                <div v-for="(Icon, index) in icons" :key="index">
+                    <IconBox>
+                        <component :is="Icon" />
+                    </IconBox>
+                </div>
             </div>
         </div>
     </div>
