@@ -5,7 +5,7 @@ import TechnologyCard from "./TechnologyCard.vue";
 <template>
     <div class="h-lvh font-extralight flex items-center justify-center text-sm">
         <div
-            class="grid grid-rows-3 md:grid-rows-2 grid-cols-2 md:grid-cols-3 size-fit gap-x-20 md:gap-x-44 gap-y-20 md:gap-y-28"
+            class="grid grid-rows-3 md:grid-rows-2 grid-cols-2 md:grid-cols-3 size-fit gap-x-20 md:gap-x-40 gap-y-20 md:gap-y-28"
         >
             <TechnologyCard
                 technology="Node.js"
