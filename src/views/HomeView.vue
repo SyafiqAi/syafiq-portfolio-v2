@@ -9,7 +9,7 @@ import TheTechnologies from "@/components/TheTechnologies/TheTechnologies.vue";
     <div>
         <main class="relative">
             <aside>
-                <SideContacts />
+                <!-- <SideContacts /> -->
             </aside>
             <TheName />
             <TheTechnologies />
