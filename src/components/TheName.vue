@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-    <div class="flex items-center justify-center h-lvh select-none">
+    <div class="flex items-center justify-center h-lvh select-none flex-col">
         <span class="font-extralight">Syafiq</span>
         <div class="w-10" />
         <span class="font-black text-4xl gradient-animation">
