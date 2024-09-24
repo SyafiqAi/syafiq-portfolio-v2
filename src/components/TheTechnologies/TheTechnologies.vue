@@ -4,11 +4,11 @@ import TechnologyCard from "./TechnologyCard.vue";
 </script>
 
 <template>
-    <div class="min-h-lvh font-extralight text-sm grid grid-rows-[4fr_8fr_4fr]">
+    <div class="min-h-lvh font-extralight text-sm">
         <div class="flex justify-center items-center">
             <SectionTitle>My Tech Stack</SectionTitle>
         </div>
-        <div class="size-full flex justify-center items-center">
+        <div class="size-full flex justify-center items-center my-16">
             <div
                 class="grid grid-rows-3 md:grid-rows-2 grid-cols-2 md:grid-cols-3 size-fit gap-x-10 md:gap-x-40 gap-y-10 md:gap-y-28"
             >
