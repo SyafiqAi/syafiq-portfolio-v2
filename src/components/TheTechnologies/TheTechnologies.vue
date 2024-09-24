@@ -4,7 +4,7 @@ import TechnologyCard from "./TechnologyCard.vue";
 </script>
 
 <template>
-    <div class="min-h-lvh font-extralight text-sm">
+    <div class="min-h-lvh font-extralight text-sm flex flex-col justify-center">
         <div class="flex justify-center items-center">
             <SectionTitle>My Tech Stack</SectionTitle>
         </div>
