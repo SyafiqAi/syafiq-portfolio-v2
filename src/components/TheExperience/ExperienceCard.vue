@@ -10,31 +10,29 @@ export interface Experience {
 </script>
 
 <template>
-    <div>
-        <div
-            class="p-4 flex flex-col bg-neutral-800 max-w-[500px] mx-2 shadow-black shadow-2xl rounded-xl"
-        >
-            <div class="flex justify-center">
-                <div class="w-fit">
-                    <div class="text-sm">
-                        <slot name="date"></slot>
-                    </div>
+    <div
+        class="p-8 md:p-14 md:py-10 flex flex-col bg-neutral-800 max-w-[500px] mx-2 shadow-black shadow-2xl rounded-xl"
+    >
+        <div class="flex justify-center">
+            <div class="w-fit">
+                <div class="text-sm">
+                    <slot name="date"></slot>
+                </div>
 
-                    <div class="text-2xl text-justify">
-                        <slot name="position"></slot>
-                    </div>
+                <div class="text-2xl text-justify">
+                    <slot name="position"></slot>
+                </div>
 
-                    <div class="text-end">
-                        <slot name="company"></slot>
-                    </div>
+                <div class="text-end">
+                    <slot name="company"></slot>
                 </div>
             </div>
+        </div>
 
-            <hr class="my-4 w-[50%] text-center m-auto" />
+        <hr class="my-8 w-[50%] text-center m-auto" />
 
-            <div class="py-6">
-                <slot></slot>
-            </div>
+        <div>
+            <slot></slot>
         </div>
     </div>
 </template>
