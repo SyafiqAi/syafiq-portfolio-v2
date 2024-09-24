@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import GradientText from "../GradientText.vue";
+import SectionTitle from "../SectionTitle.vue";
 import TechnologyCard from "./TechnologyCard.vue";
 </script>
 
 <template>
     <div class="min-h-lvh font-extralight text-sm grid grid-rows-[4fr_8fr_4fr]">
-        <div class="text-4xl md:text-6xl flex items-center justify-center">
-            <GradientText text="My Tech Stack" />
+        <div class="flex justify-center items-center">
+            <SectionTitle text="My Tech Stack" />
         </div>
         <div class="size-full flex justify-center items-center">
             <div
