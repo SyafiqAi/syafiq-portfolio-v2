@@ -1,11 +1,33 @@
 <script setup lang="ts">
+import { onBeforeUnmount, onMounted, useTemplateRef } from "vue";
 import GradientText from "../GradientText.vue";
 import TheContacts from "./TheContacts.vue";
+
+const ref = useTemplateRef("section");
+
+function onScroll() {
+    if (window.scrollY === 0) {
+        setTimeout(() => {
+            ref.value?.classList.remove("short-section");
+        }, 800);
+    } else {
+        ref.value?.classList.add("short-section");
+    }
+}
+
+onMounted(() => {
+    window.addEventListener("scroll", onScroll);
+});
+
+onBeforeUnmount(() => {
+    window.removeEventListener("scroll", onScroll);
+});
 </script>
 
 <template>
     <div
-        class="flex items-center justify-center min-h-svh select-none flex-col"
+        class="flex items-center justify-center h-[100svh] select-none flex-col transition-all duration-[1s]"
+        ref="section"
     >
         <div class="flex flex-col items-center group py-32">
             <span class="font-extralight mb-2">Syafiq</span>
@@ -18,4 +40,8 @@ import TheContacts from "./TheContacts.vue";
         </div>
     </div>
 </template>
-<style scoped></style>
+<style scoped>
+.short-section {
+    height: 30lvh;
+}
+</style>
