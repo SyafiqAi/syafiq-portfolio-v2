@@ -41,10 +41,9 @@ const experiences = [rfLaiyonExperience, dsmExperience];
 
 <template>
     <div class="my-20">
-        <SectionTitle
-            text="Experience"
-            class="flex justify-center mt-10 w-full font-extralight"
-        />
+        <SectionTitle class="flex justify-center mt-10 w-full font-extralight">
+            Experience
+        </SectionTitle>
         <div class="flex flex-col gap-y-20 items-center my-16">
             <ExperienceCard
                 v-for="experience in experiences"

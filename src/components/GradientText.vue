@@ -1,9 +1,7 @@
-<script setup lang="ts">
-defineProps<{ text: string }>();
-</script>
+<script setup lang="ts"></script>
 
 <template>
-    <p class="gradient-animation">{{ text }}</p>
+    <p class="gradient-animation"><slot></slot></p>
 </template>
 
 <style scoped>

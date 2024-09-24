@@ -12,7 +12,7 @@ import TheContacts from "./TheContacts.vue";
             <h1
                 class="font-black text-4xl md:text-6xl lg:text-9xl text-nowrap max-w-[100lvw]"
             >
-                <GradientText text="Web Developer" />
+                <GradientText>Web Developer</GradientText>
             </h1>
             <TheContacts />
         </div>
