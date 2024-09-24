@@ -40,7 +40,7 @@ const experiences = [rfLaiyonExperience, dsmExperience];
 </script>
 
 <template>
-    <div class="my-20">
+    <div class="my-20 mb-48">
         <SectionTitle class="flex justify-center mt-10 w-full font-extralight">
             Experience
         </SectionTitle>
