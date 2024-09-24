@@ -24,7 +24,7 @@ function copyEmailToClipboard() {
 
 <template>
     <div
-        class="h-dvh gradient-animation flex flex-col justify-center text-center text-neutral-900 font-black overflow-hidden"
+        class="min-h-dvh gradient-animation flex flex-col justify-center text-center text-neutral-900 font-black overflow-hidden"
     >
         <div class="text-[15dvw] justify-self-start-start">Let's go.</div>
         <div class="text-[7dvw]">

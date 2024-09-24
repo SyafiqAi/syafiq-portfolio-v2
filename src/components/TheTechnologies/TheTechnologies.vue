@@ -4,7 +4,7 @@ import TechnologyCard from "./TechnologyCard.vue";
 </script>
 
 <template>
-    <div class="h-lvh font-extralight text-sm grid grid-rows-[4fr_8fr_4fr]">
+    <div class="min-h-lvh font-extralight text-sm grid grid-rows-[4fr_8fr_4fr]">
         <div class="text-4xl md:text-6xl flex items-center justify-center">
             <GradientText text="My Tech Stack" />
         </div>

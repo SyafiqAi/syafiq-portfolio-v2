@@ -4,7 +4,9 @@ import TheContacts from "./TheContacts.vue";
 </script>
 
 <template>
-    <div class="flex items-center justify-center h-svh select-none flex-col">
+    <div
+        class="flex items-center justify-center min-h-svh select-none flex-col"
+    >
         <div class="flex flex-col items-center group py-32">
             <span class="font-extralight mb-2">Syafiq</span>
             <h1
