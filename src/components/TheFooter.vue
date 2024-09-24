@@ -1,33 +1,84 @@
 <script setup lang="ts">
-import CopyIcon from "./icons/CopyIcon.vue";
+import { ref } from "vue";
+import CheckIcon from "./icons/CheckIcon.vue";
 import CopyIcon2 from "./icons/CopyIcon2.vue";
+import IconEmail from "./icons/IconEmail.vue";
 import IconGitHub from "./icons/IconGitHub.vue";
 import IconLinkedIn from "./icons/IconLinkedIn.vue";
-import IconBox from "./SideContacts/IconBox.vue";
+
+const email = "isyafiq@gmail.com";
+const linkedInUrl = "https://www.linkedin.com/in/syafiq-aiman-b10b58303";
+const gitHubUrl = "https://github.com/SyafiqAi";
+
+const showCheckIcon = ref(false);
+
+function copyEmailToClipboard() {
+    navigator.clipboard.writeText(email).then(() => {
+        showCheckIcon.value = true;
+        setTimeout(() => {
+            showCheckIcon.value = false;
+        }, 1300);
+    });
+}
 </script>
 
 <template>
     <div
-        class="h-dvh bg-gray-500 flex flex-col justify-center text-center text-neutral-900 font-black text-[7dvw]"
+        class="h-dvh gradient-animation flex flex-col justify-center text-center text-neutral-900 font-black overflow-hidden"
     >
-        <div>Let's go.</div>
-        <div class="flex justify-center">
-            <div class="flex items-center">
-                <IconLinkedIn class="min-h-[70%] min-w-full" />
+        <div class="text-[15dvw] justify-self-start-start">Let's go.</div>
+        <div class="text-[7dvw]">
+            <div class="flex justify-center">
+                <div class="flex justify-center gap-2">
+                    <div class="flex items-center">
+                        <IconEmail class="min-h-[70%] min-w-full" />
+                    </div>
+                    {{ email }}
+                    <div
+                        class="flex items-center"
+                        @click="copyEmailToClipboard"
+                    >
+                        <CheckIcon
+                            v-if="showCheckIcon"
+                            class="min-h-[70%] min-w-full animate-bounce"
+                        />
+                        <CopyIcon2
+                            v-else
+                            class="min-h-[70%] min-w-full hover:text-neutral-800 cursor-pointer"
+                        />
+                    </div>
+                </div>
             </div>
-            LinkedIn
-        </div>
-        <div class="flex gap-4 md:gap-10 justify-center">
-            email@gmail.com
-            <div class="flex items-center">
-                <CopyIcon2 class="min-h-[70%] min-w-full" />
+            <div class="flex justify-center">
+                <a
+                    :href="linkedInUrl"
+                    target="_blank"
+                    class="flex justify-center gap-2 hover:underline"
+                >
+                    <div class="flex items-center">
+                        <IconLinkedIn
+                            class="min-h-[70%] min-w-full"
+                            fill="currentColor"
+                        />
+                    </div>
+                    LinkedIn
+                </a>
             </div>
-        </div>
-        <div class="flex justify-center">
-            <div class="flex items-center">
-                <IconGitHub class="min-h-[70%] min-w-full" />
+            <div class="flex justify-center">
+                <a
+                    :href="gitHubUrl"
+                    target="_blank"
+                    class="flex justify-center gap-2 hover:underline"
+                >
+                    <div class="flex items-center">
+                        <IconGitHub
+                            class="min-h-[70%] min-w-full"
+                            fill="currentColor"
+                        />
+                    </div>
+                    GitHub
+                </a>
             </div>
-            GitHub
         </div>
     </div>
 </template>
@@ -59,5 +110,10 @@ import IconBox from "./SideContacts/IconBox.vue";
             background-position: var(--bg-size) 0;
         }
     }
+}
+
+::selection {
+    background: rgb(23 23 23);
+    color: white;
 }
 </style>

@@ -1,3 +1,8 @@
+<script setup lang="ts">
+const { fill } = defineProps<{ fill?: string }>();
+const white = "white";
+</script>
+
 <template>
     <svg viewBox="0 0 20 20">
         <path
@@ -15,7 +20,7 @@
             <g
                 id="Dribbble-Light-Preview"
                 transform="translate(-140.000000, -7559.000000)"
-                fill="white"
+                :fill="fill ?? white"
             >
                 <g id="icons" transform="translate(56.000000, 160.000000)">
                     <path

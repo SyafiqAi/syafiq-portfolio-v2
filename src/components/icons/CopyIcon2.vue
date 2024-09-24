@@ -5,7 +5,6 @@
         <path
             fill="currentColor"
             style="
-                color: #000000;
                 stroke-width: 1;
                 stroke-linecap: round;
                 stroke-linejoin: round;
@@ -17,7 +16,6 @@
         <path
             fill="currentColor"
             style="
-                color: #000000;
                 stroke-width: 1;
                 stroke-linecap: round;
                 stroke-linejoin: round;
