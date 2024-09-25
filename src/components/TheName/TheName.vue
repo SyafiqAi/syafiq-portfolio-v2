@@ -6,12 +6,12 @@ import TheContacts from "./TheContacts.vue";
 const ref = useTemplateRef("section");
 
 function onScroll() {
-    if (window.scrollY === 0) {
+    if (window.scrollY > 0) {
+        ref.value?.classList.add("short-section");
+    } else {
         setTimeout(() => {
             ref.value?.classList.remove("short-section");
-        }, 800);
-    } else {
-        ref.value?.classList.add("short-section");
+        }, 1000);
     }
 }
 
