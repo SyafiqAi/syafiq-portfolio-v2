@@ -11,7 +11,7 @@ export interface Experience {
 
 <template>
     <div
-        class="p-8 md:p-14 md:py-10 flex flex-col bg-neutral-800 max-w-[500px] mx-2 shadow-black shadow-2xl rounded-xl"
+        class="p-8 text-sm md:text-base md:p-14 md:py-10 flex flex-col bg-neutral-800 max-w-[500px] mx-2 shadow-black shadow-2xl rounded-xl"
     >
         <div class="flex justify-center">
             <div class="w-fit">
