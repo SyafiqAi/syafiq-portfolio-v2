@@ -9,6 +9,7 @@ interface Experience {
     content: string[];
     logoSrc: string;
     logoMainColor: string;
+    companyWebsiteUrl: string;
 }
 
 const rfLaiyonExperience: Experience = {
@@ -24,7 +25,8 @@ const rfLaiyonExperience: Experience = {
         "Self-learned React - Next.js, Node.js, Laravel.",
     ],
     logoSrc: "src/assets/logos/rflaiyon.png",
-    logoMainColor: '#49c0a0ff'
+    logoMainColor: "#49c0a0ff",
+    companyWebsiteUrl: "https://rflaiyon.com/",
 };
 
 const dsmExperience: Experience = {
@@ -39,7 +41,8 @@ const dsmExperience: Experience = {
         "Self-learned Vue.js, Nuxt.js.",
     ],
     logoSrc: "src/assets/logos/dsm.png",
-    logoMainColor: '#ff0000ff'
+    logoMainColor: "#ff0000ff",
+    companyWebsiteUrl: "https://www.dsm.com.my/",
 };
 
 const experiences = [rfLaiyonExperience, dsmExperience];
@@ -51,27 +54,32 @@ const experiences = [rfLaiyonExperience, dsmExperience];
             Experience
         </SectionTitle>
         <div class="flex flex-col gap-y-20 items-center my-16">
-            <ExperienceCard
+            <a
                 v-for="experience in experiences"
                 :key="experience.company"
-                :logo-src="experience.logoSrc"
-                :logo-alt="experience.company"
-                :company-logo-main-color="experience.logoMainColor"
+                :href="experience.companyWebsiteUrl"
+                target="_blank"
             >
-                <template #position>
-                    {{ experience.position }}
-                </template>
-                <template #company> {{ experience.company }}</template>
-                <template #date> {{ experience.date }}</template>
-                <ul class="list-disc list-outside pl-4 space-y-2">
-                    <li
-                        v-for="(item, index) in experience.content"
-                        :key="index"
-                    >
-                        {{ item }}
-                    </li>
-                </ul>
-            </ExperienceCard>
+                <ExperienceCard
+                    :logo-src="experience.logoSrc"
+                    :logo-alt="experience.company"
+                    :company-logo-main-color="experience.logoMainColor"
+                >
+                    <template #position>
+                        {{ experience.position }}
+                    </template>
+                    <template #company> {{ experience.company }}</template>
+                    <template #date> {{ experience.date }}</template>
+                    <ul class="list-disc list-outside pl-4 space-y-2">
+                        <li
+                            v-for="(item, index) in experience.content"
+                            :key="index"
+                        >
+                            {{ item }}
+                        </li>
+                    </ul>
+                </ExperienceCard>
+            </a>
         </div>
     </div>
 </template>
