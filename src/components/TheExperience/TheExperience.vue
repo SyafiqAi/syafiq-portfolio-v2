@@ -28,7 +28,7 @@ const rfLaiyonExperience: Experience = {
         "Self-learned React, Next.js, Node.js, Laravel.",
     ],
     logoSrc: rfLogo,
-    logoMainColor: "hover:shadow-[#49c0a0ff]",
+    logoMainColor: "hover:shadow-[#49c0a0ff]", // TODO should only be the color hex.
     companyWebsiteUrl: "https://rflaiyon.com/",
 };
 
