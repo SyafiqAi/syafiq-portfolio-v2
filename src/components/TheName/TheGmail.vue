@@ -11,22 +11,23 @@ const showCheckIcon = ref(false);
 const showXIcon = ref(false);
 
 function copyEmailToClipboard() {
-    navigator.clipboard
-        .writeText(email)
-        .then(() => {
-            showCheckIcon.value = true;
+    try {
+        navigator.clipboard
+            .writeText(email)
+            .then(() => {
+                showCheckIcon.value = true;
 
-            setTimeout(() => {
-                showCheckIcon.value = false;
-            }, 1300);
-        })
-        .catch(() => {
-            showXIcon.value = true;
+                setTimeout(() => {
+                    showCheckIcon.value = false;
+                }, 1300);
+            })
+    } catch (e) {
+        showXIcon.value = true;
 
-            setTimeout(() => {
-                showXIcon.value = false;
-            }, 1300);
-        });
+        setTimeout(() => {
+            showXIcon.value = false;
+        }, 1300);
+    }
 }
 </script>
 
