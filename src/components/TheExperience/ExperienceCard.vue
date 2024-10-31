@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { type VueElement } from "vue";
+import TheAccordion from "../Common/TheAccordion.vue";
 
 export interface Experience {
     company: string;
@@ -12,8 +13,9 @@ const { logoSrc, logoAlt, companyLogoMainColor } = defineProps<{
     logoSrc: string;
     logoAlt: string;
     companyLogoMainColor: string;
+    isOpen: boolean;
+    companyWebsiteUrl: string;
 }>();
-
 </script>
 
 <template>
@@ -25,7 +27,7 @@ const { logoSrc, logoAlt, companyLogoMainColor } = defineProps<{
             <img
                 :src="logoSrc"
                 :alt="`${logoAlt} logo`"
-                class="h-20 rounded-2xl"
+                class="max-h-20 max-w-20 rounded-2xl"
             />
             <div class="w-4"></div>
             <div class="w-fit">
@@ -37,17 +39,20 @@ const { logoSrc, logoAlt, companyLogoMainColor } = defineProps<{
                     <slot name="position"></slot>
                 </div>
 
-                <div class="text-end group-hover:underline text-xs md:text-base">
-                    <slot name="company"></slot>
+                <div class="text-end text-xs md:text-base"  >
+                    <a :href="companyWebsiteUrl" class="hover:underline" target="_blank" @click="e => {e.stopPropagation()}">
+                        <slot name="company"></slot>
+                    </a>
                 </div>
             </div>
         </div>
 
-        <hr class="my-8 w-[50%] text-center m-auto" />
-
-        <div>
-            <slot></slot>
-        </div>
+        <TheAccordion :is-open="isOpen">
+            <hr class="my-8 w-[50%] text-center m-auto" />
+            <div>
+                <slot></slot>
+            </div>
+        </TheAccordion>
     </div>
 </template>
 

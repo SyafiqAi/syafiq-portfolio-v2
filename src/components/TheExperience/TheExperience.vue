@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import SectionTitle from "../SectionTitle.vue";
 import ExperienceCard from "./ExperienceCard.vue";
 
@@ -46,6 +47,13 @@ const dsmExperience: Experience = {
 };
 
 const experiences = [rfLaiyonExperience, dsmExperience];
+
+const currentIsOpen = ref(-1);
+
+function handleOpen(index: number) {
+    if (currentIsOpen.value === index) currentIsOpen.value = -1;
+    else currentIsOpen.value = index;
+}
 </script>
 
 <template>
@@ -53,34 +61,33 @@ const experiences = [rfLaiyonExperience, dsmExperience];
         <SectionTitle class="flex justify-center mt-10 w-full font-extralight">
             Experience
         </SectionTitle>
+
         <div class="flex flex-col gap-y-20 items-center my-16">
-            <a
-                v-for="experience in experiences"
+            <ExperienceCard
+                v-for="(experience, index) in experiences"
                 :key="experience.company"
-                :href="experience.companyWebsiteUrl"
-                target="_blank"
+                :logo-src="experience.logoSrc"
+                :logo-alt="experience.company"
+                :company-logo-main-color="experience.logoMainColor"
+                :is-open="currentIsOpen === index"
+                :company-website-url="experience.companyWebsiteUrl"
+                @click="handleOpen(index)"
             >
-                <ExperienceCard
-                    :logo-src="experience.logoSrc"
-                    :logo-alt="experience.company"
-                    :company-logo-main-color="experience.logoMainColor"
-                >
-                    <template #position>
-                        {{ experience.position }}
-                    </template>
-                    <template #company> {{ experience.company }}</template>
-                    <template #date> {{ experience.date }}</template>
-                    <ul>
-                        <li
-                            v-for="(item, index) in experience.content"
-                            :key="index"
-                            class="text-sm md:text-base px-4 py-2 rounded-xl text-justify"
-                        >
-                            {{ item }}
-                        </li>
-                    </ul>
-                </ExperienceCard>
-            </a>
+                <template #position>
+                    {{ experience.position }}
+                </template>
+                <template #company> {{ experience.company }}</template>
+                <template #date> {{ experience.date }}</template>
+                <ul>
+                    <li
+                        v-for="(item, index) in experience.content"
+                        :key="index"
+                        class="text-sm md:text-base px-4 py-2 rounded-xl text-justify"
+                    >
+                        {{ item }}
+                    </li>
+                </ul>
+            </ExperienceCard>
         </div>
     </div>
 </template>
