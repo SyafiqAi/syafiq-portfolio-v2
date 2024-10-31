@@ -7,6 +7,8 @@ interface Experience {
     company: string;
     date: string;
     content: string[];
+    logoSrc: string;
+    logoMainColor: string;
 }
 
 const rfLaiyonExperience: Experience = {
@@ -21,6 +23,8 @@ const rfLaiyonExperience: Experience = {
         "Contributed to the development of a textbook management system for the public education sector.",
         "Self-learned React - Next.js, Node.js, Laravel.",
     ],
+    logoSrc: "src/assets/logos/rflaiyon.png",
+    logoMainColor: '#49c0a0ff'
 };
 
 const dsmExperience: Experience = {
@@ -34,6 +38,8 @@ const dsmExperience: Experience = {
         "Exposure to CI/CD development.",
         "Self-learned Vue.js, Nuxt.js.",
     ],
+    logoSrc: "src/assets/logos/dsm.png",
+    logoMainColor: '#ff0000ff'
 };
 
 const experiences = [rfLaiyonExperience, dsmExperience];
@@ -48,6 +54,9 @@ const experiences = [rfLaiyonExperience, dsmExperience];
             <ExperienceCard
                 v-for="experience in experiences"
                 :key="experience.company"
+                :logo-src="experience.logoSrc"
+                :logo-alt="experience.company"
+                :company-logo-main-color="experience.logoMainColor"
             >
                 <template #position>
                     {{ experience.position }}
