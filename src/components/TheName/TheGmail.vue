@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import CopyIcon from "../icons/CopyIcon.vue";
+import CheckIcon from "../icons/CheckIcon.vue";
+import CopyIcon2 from "../icons/CopyIcon2.vue";
+import CrossIcon from "../icons/CrossIcon.vue";
 import IconGmail from "../icons/IconGmail.vue";
 import IconBox from "../SideContacts/IconBox.vue";
-import CheckIcon from "../icons/CheckIcon.vue";
-import CrossIcon from "../icons/CrossIcon.vue";
 
 const email = "isyafiq@gmail.com";
 const showCheckIcon = ref(false);
@@ -53,7 +53,7 @@ function copyEmailToClipboard() {
                 <div v-else-if="showXIcon" class="scale-150">
                     <CrossIcon class="text-white animate-bounce" />
                 </div>
-                <CopyIcon v-else />
+                <CopyIcon2 v-else />
             </div>
         </div>
     </div>
