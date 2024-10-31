@@ -46,7 +46,7 @@ function copyEmailToClipboard() {
                         />
                         <CopyIcon2
                             v-else
-                            class="min-h-[70%] min-w-full hover:text-neutral-800 cursor-pointer"
+                            class="min-h-[70%] min-w-full hover:text-white cursor-pointer"
                         />
                     </div>
                 </div>
