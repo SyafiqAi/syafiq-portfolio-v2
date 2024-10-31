@@ -67,7 +67,7 @@ function handleOpen(index: number) {
                 v-for="(experience, index) in experiences"
                 :key="experience.company"
                 :logo-src="experience.logoSrc"
-                :logo-alt="experience.company"
+                :company="experience.company"
                 :company-logo-main-color="experience.logoMainColor"
                 :is-open="currentIsOpen === index"
                 :company-website-url="experience.companyWebsiteUrl"

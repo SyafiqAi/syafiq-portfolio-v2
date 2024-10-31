@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { type VueElement } from "vue";
 import TheAccordion from "../Common/TheAccordion.vue";
+import ExternalLinkIcon from "../icons/ExternalLinkIcon.vue";
 
 export interface Experience {
     company: string;
@@ -9,9 +10,9 @@ export interface Experience {
     content: VueElement;
 }
 
-const { logoSrc, logoAlt, companyLogoMainColor } = defineProps<{
+const { logoSrc, company, companyLogoMainColor } = defineProps<{
     logoSrc: string;
-    logoAlt: string;
+    company: string;
     companyLogoMainColor: string;
     isOpen: boolean;
     companyWebsiteUrl: string;
@@ -26,7 +27,7 @@ const { logoSrc, logoAlt, companyLogoMainColor } = defineProps<{
         <div class="flex justify-center items-center">
             <img
                 :src="logoSrc"
-                :alt="`${logoAlt} logo`"
+                :alt="`${company} logo`"
                 class="max-h-20 max-w-20 rounded-2xl"
             />
             <div class="w-4"></div>
@@ -39,9 +40,21 @@ const { logoSrc, logoAlt, companyLogoMainColor } = defineProps<{
                     <slot name="position"></slot>
                 </div>
 
-                <div class="text-end text-xs md:text-base"  >
-                    <a :href="companyWebsiteUrl" class="hover:underline" target="_blank" @click="e => {e.stopPropagation()}">
-                        <slot name="company"></slot>
+                <div class="flex justify-end text-xs md:text-base">
+                    <a
+                        :href="companyWebsiteUrl"
+                        class="hover:underline"
+                        target="_blank"
+                        @click="
+                            (e) => {
+                                e.stopPropagation();
+                            }
+                        "
+                    >
+                    <div class="flex place-items-center gap-1">
+                        {{ company }} 
+                        <ExternalLinkIcon class="h-4 w-fit" />
+                    </div>
                     </a>
                 </div>
             </div>
