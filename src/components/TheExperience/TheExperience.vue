@@ -14,11 +14,11 @@ interface Experience {
 }
 
 const rfLaiyonExperience: Experience = {
-    position: "Front End Web Developer",
+    position: "Front-End Web Developer",
     company: "RF Laiyon Interactive",
     date: "28 May 2024 - 13 Nov 2024",
     content: [
-        "Front end development using React, Next.js.",
+        "Front-end development using React, Next.js.",
         "Worked closely with back-end developers to integrate RESTful APIs.",
         "Learned authorisation using JWT.",
         "CI/CD development.",
@@ -31,11 +31,11 @@ const rfLaiyonExperience: Experience = {
 };
 
 const dsmExperience: Experience = {
-    position: "Front End Web Developer",
+    position: "Front-End Web Developer",
     company: "Digital System Malaysia",
     date: "Oct 2022 - Jan 2023",
     content: [
-        "Front end development using Vue.js. ",
+        "Front-end development using Vue.js. ",
         "Worked in a team of 7 developers in an agile development method using Microsoft Azure (DevOps).",
         "Contributed to the development of an ERP suite for trucking companies.",
         "Exposure to CI/CD development.",
@@ -45,8 +45,19 @@ const dsmExperience: Experience = {
     logoMainColor: "hover:shadow-[#ff0000ff]",
     companyWebsiteUrl: "https://www.dsm.com.my/",
 };
+const alphaRedExperience: Experience = {
+    position: "Back-End Web Developer",
+    company: "Alpha Red Solutions",
+    date: "Nov 14 2024 - Present",
+    content: [
+        "Back-end development using Node.js. ",
+    ],
+    logoSrc: "src/assets/logos/alphared.png",
+    logoMainColor: "hover:shadow-[#d14437ff]",
+    companyWebsiteUrl: "https://www.alphareds.com/",
+};
 
-const experiences = [rfLaiyonExperience, dsmExperience];
+const experiences = [alphaRedExperience, rfLaiyonExperience, dsmExperience];
 
 const currentIsOpen = ref(-1);
 
@@ -62,7 +73,7 @@ function handleOpen(index: number) {
             Experience
         </SectionTitle>
 
-        <div class="flex flex-col gap-y-20 items-center my-16">
+        <div class="flex flex-col gap-y-10 items-center my-16">
             <ExperienceCard
                 v-for="(experience, index) in experiences"
                 :key="experience.company"
