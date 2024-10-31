@@ -15,7 +15,7 @@ interface Experience {
 const rfLaiyonExperience: Experience = {
     position: "Front End Web Developer",
     company: "RF Laiyon Interactive",
-    date: "28 May 2024 - 13 November 2024",
+    date: "28 May 2024 - 13 Nov 2024",
     content: [
         "Front end development using React, Next.js.",
         "Worked closely with back-end developers to integrate RESTful APIs.",
