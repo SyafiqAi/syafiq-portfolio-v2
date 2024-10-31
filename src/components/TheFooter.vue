@@ -6,6 +6,7 @@ import IconEmail from "./icons/IconEmail.vue";
 import IconGitHub from "./icons/IconGitHub.vue";
 import IconLinkedIn from "./icons/IconLinkedIn.vue";
 
+const nav = navigator;
 const email = "isyafiq@gmail.com";
 const linkedInUrl = "https://www.linkedin.com/in/syafiq-aiman-b10b58303";
 const gitHubUrl = "https://github.com/SyafiqAi";
@@ -37,6 +38,7 @@ function copyEmailToClipboard() {
                     <div
                         class="flex items-center"
                         @click="copyEmailToClipboard"
+                        v-if="nav.clipboard"
                     >
                         <CheckIcon
                             v-if="showCheckIcon"

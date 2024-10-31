@@ -9,6 +9,7 @@ import CrossIcon from "../icons/CrossIcon.vue";
 const email = "isyafiq@gmail.com";
 const showCheckIcon = ref(false);
 const showXIcon = ref(false);
+const nav = navigator;
 
 function copyEmailToClipboard() {
     try {
@@ -43,6 +44,7 @@ function copyEmailToClipboard() {
             <div
                 class="size-4 inline-block cursor-pointer text-neutral-400 hover:text-white"
                 @click="copyEmailToClipboard"
+                v-if="!!nav.clipboard"
             >
                 <CheckIcon
                     v-if="showCheckIcon"
