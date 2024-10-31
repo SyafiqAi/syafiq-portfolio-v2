@@ -17,15 +17,15 @@ const rfLaiyonExperience: Experience = {
     company: "RF Laiyon Interactive",
     date: "May 2024 - Present",
     content: [
-        "Front end development using React - Next.js.",
+        "Front end development using React, Next.js.",
         "Worked closely with back-end developers to integrate RESTful APIs.",
         "Learned authorisation using JWT.",
         "CI/CD development.",
         "Contributed to the development of a textbook management system for the public education sector.",
-        "Self-learned React - Next.js, Node.js, Laravel.",
+        "Self-learned React, Next.js, Node.js, Laravel.",
     ],
     logoSrc: "src/assets/logos/rflaiyon.png",
-    logoMainColor: "#49c0a0ff",
+    logoMainColor: "hover:shadow-[#49c0a0ff]",
     companyWebsiteUrl: "https://rflaiyon.com/",
 };
 
@@ -41,7 +41,7 @@ const dsmExperience: Experience = {
         "Self-learned Vue.js, Nuxt.js.",
     ],
     logoSrc: "src/assets/logos/dsm.png",
-    logoMainColor: "#ff0000ff",
+    logoMainColor: "hover:shadow-[#ff0000ff]",
     companyWebsiteUrl: "https://www.dsm.com.my/",
 };
 
@@ -70,10 +70,11 @@ const experiences = [rfLaiyonExperience, dsmExperience];
                     </template>
                     <template #company> {{ experience.company }}</template>
                     <template #date> {{ experience.date }}</template>
-                    <ul class="list-disc list-outside pl-4 space-y-2">
+                    <ul>
                         <li
                             v-for="(item, index) in experience.content"
                             :key="index"
+                            class="text-sm md:text-base px-4 py-2 rounded-xl text-justify"
                         >
                             {{ item }}
                         </li>

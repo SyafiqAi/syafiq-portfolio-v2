@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, type VueElement } from "vue";
+import { type VueElement } from "vue";
 
 export interface Experience {
     company: string;
@@ -14,12 +14,12 @@ const { logoSrc, logoAlt, companyLogoMainColor } = defineProps<{
     companyLogoMainColor: string;
 }>();
 
-const shadow = computed(() => "hover:shadow-[" + companyLogoMainColor + "]")
 </script>
 
 <template>
     <div
-        :class="`p-8 md:p-14 md:py-10 flex flex-col bg-neutral-800 max-w-[500px] mx-2 rounded-xl shadow-2xl transition-all duration-300 shadow-black hover:scale-105 group cursor-pointer ${shadow}`"
+        ref="card"
+        :class="`p-8 md:p-14 md:py-10 flex flex-col bg-neutral-800 max-w-[500px] mx-2 rounded-xl shadow-2xl transition-all duration-300 shadow-black group cursor-pointer ${companyLogoMainColor}`"
     >
         <div class="flex justify-center items-center">
             <img
@@ -29,15 +29,15 @@ const shadow = computed(() => "hover:shadow-[" + companyLogoMainColor + "]")
             />
             <div class="w-4"></div>
             <div class="w-fit">
-                <div class="text-sm">
+                <div class="text-xs">
                     <slot name="date"></slot>
                 </div>
 
-                <div class="text-2xl text-justify">
+                <div class="text-base md:text-2xl">
                     <slot name="position"></slot>
                 </div>
 
-                <div class="text-end group-hover:underline">
+                <div class="text-end group-hover:underline text-xs md:text-base">
                     <slot name="company"></slot>
                 </div>
             </div>
