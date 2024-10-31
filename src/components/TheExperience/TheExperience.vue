@@ -2,7 +2,9 @@
 import { ref } from "vue";
 import SectionTitle from "../SectionTitle.vue";
 import ExperienceCard from "./ExperienceCard.vue";
-
+import rfLogo from "@/assets/logos/rflaiyon.png";
+import dsmLogo from "@/assets/logos/dsm.png";
+import alphaLogo from "@/assets/logos/alphared.png";
 interface Experience {
     position: string;
     company: string;
@@ -25,7 +27,7 @@ const rfLaiyonExperience: Experience = {
         "Contributed to the development of a textbook management system for the public education sector.",
         "Self-learned React, Next.js, Node.js, Laravel.",
     ],
-    logoSrc: "src/assets/logos/rflaiyon.png",
+    logoSrc: rfLogo,
     logoMainColor: "hover:shadow-[#49c0a0ff]",
     companyWebsiteUrl: "https://rflaiyon.com/",
 };
@@ -41,7 +43,7 @@ const dsmExperience: Experience = {
         "Exposure to CI/CD development.",
         "Self-learned Vue.js, Nuxt.js.",
     ],
-    logoSrc: "src/assets/logos/dsm.png",
+    logoSrc: dsmLogo,
     logoMainColor: "hover:shadow-[#ff0000ff]",
     companyWebsiteUrl: "https://www.dsm.com.my/",
 };
@@ -52,7 +54,7 @@ const alphaRedExperience: Experience = {
     content: [
         "TBA. ",
     ],
-    logoSrc: "src/assets/logos/alphared.png",
+    logoSrc: alphaLogo,
     logoMainColor: "hover:shadow-[#d14437ff]",
     companyWebsiteUrl: "https://www.alphareds.com/",
 };

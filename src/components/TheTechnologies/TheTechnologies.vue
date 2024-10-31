@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import SectionTitle from "../SectionTitle.vue";
 import TechnologyCard from "./TechnologyCard.vue";
+import nodeIcon from '@/assets/logos/node-icon.svg'
+import reactIcon from "@/assets/logos/react-icon.svg"
+import nextIcon from "@/assets/logos/next-icon.svg"
+import gitIcon from "@/assets/logos/git-icon.svg"
+import vueIcon from "@/assets/logos/vue-icon.svg"
+import typescriptIcon from "@/assets/logos/typescript-icon.svg"
 </script>
 
 <template>
@@ -14,32 +20,32 @@ import TechnologyCard from "./TechnologyCard.vue";
             >
                 <TechnologyCard
                     technology="Node.js"
-                    src="src/assets/logos/node-icon.svg"
+                    :src="nodeIcon"
                     shadow-color="#8cc84bff"
                 />
                 <TechnologyCard
                     technology="React"
-                    src="src/assets/logos/react-icon.svg"
+                    :src="reactIcon"
                     shadow-color="#53c1deff"
                 />
                 <TechnologyCard
                     technology="Next.js"
-                    src="src/assets/logos/next-icon.svg"
+                    :src="nextIcon"
                     shadow-color="white"
                 />
                 <TechnologyCard
                     technology="Git"
-                    src="src/assets/logos/git-icon.svg"
+                    :src="gitIcon"
                     shadow-color="#ee513bff"
                 />
                 <TechnologyCard
                     technology="Vue"
-                    src="src/assets/logos/vue-icon.svg"
+                    :src="vueIcon"
                     shadow-color="#4dba87ff"
                 />
                 <TechnologyCard
                     technology="TypeScript"
-                    src="src/assets/logos/typescript-icon.svg"
+                    :src="typescriptIcon"
                     shadow-color="#3178c6ff"
                 />
             </div>
