@@ -50,7 +50,7 @@ const alphaRedExperience: Experience = {
     company: "Alpha Red Solutions",
     date: "Nov 14 2024 - Present",
     content: [
-        "Back-end development using Node.js. ",
+        "TBA. ",
     ],
     logoSrc: "src/assets/logos/alphared.png",
     logoMainColor: "hover:shadow-[#d14437ff]",
