@@ -29,10 +29,13 @@ onMounted(() => {
 
 <template>
     <div
-        :class="`p-7 md:px-14 md:pt-10 flex flex-col bg-neutral-800 w-[90vw] md:w-[500px] mx-2 rounded-xl shadow-2xl transition-all duration-300 ${isOpen && 'shadow-[color:--shadow-color]'} hover:shadow-[color:--shadow-color] group cursor-pointer`"
+        :class="`relative p-7 sm:px-14 sm:py-10 flex flex-col bg-neutral-800 w-[90vw] sm:w-[500px] mx-2 rounded-xl shadow-2xl transition-all duration-300 ${isOpen && 'shadow-[color:--shadow-color]'} hover:shadow-[color:--shadow-color] group cursor-pointer`"
         ref="card-ref"
         @click="isOpen = !isOpen"
     >
+            <CaretDownIcon
+                :class="`absolute top-4 right-4 h-2 ${isOpen && 'rotate-180'} transition-transform duration-500 opacity-50`"
+            />
         <div class="flex gap-4 justify-center items-center">
             <img
                 :src="logoSrc"
@@ -44,11 +47,11 @@ onMounted(() => {
                     <slot name="date"></slot>
                 </div>
 
-                <div class="text-base md:text-2xl">
+                <div class="text-base sm:text-2xl">
                     <slot name="position"></slot>
                 </div>
 
-                <div class="flex justify-end text-xs md:text-base">
+                <div class="flex justify-end text-xs sm:text-base">
                     <a
                         :href="companyWebsiteUrl"
                         class="hover:underline"
@@ -74,9 +77,6 @@ onMounted(() => {
                 <slot></slot>
             </div>
         </TheAccordion>
-        <CaretDownIcon
-            :class="`h-2 mt-6 ${isOpen && 'rotate-180'} transition-transform duration-500 opacity-50`"
-        />
     </div>
 </template>
 
