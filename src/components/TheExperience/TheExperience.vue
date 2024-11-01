@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import alphaLogo from "@/assets/logos/alphared.png";
+import dsmLogo from "@/assets/logos/dsm.png";
+import rfLogo from "@/assets/logos/rflaiyon.png";
 import SectionTitle from "../SectionTitle.vue";
 import ExperienceCard from "./ExperienceCard.vue";
-import rfLogo from "@/assets/logos/rflaiyon.png";
-import dsmLogo from "@/assets/logos/dsm.png";
-import alphaLogo from "@/assets/logos/alphared.png";
 interface Experience {
     position: string;
     company: string;
@@ -61,12 +60,6 @@ const alphaRedExperience: Experience = {
 
 const experiences = [alphaRedExperience, rfLaiyonExperience, dsmExperience];
 
-const currentIsOpen = ref(-1);
-
-function handleOpen(index: number) {
-    if (currentIsOpen.value === index) currentIsOpen.value = -1;
-    else currentIsOpen.value = index;
-}
 </script>
 
 <template>
@@ -77,14 +70,12 @@ function handleOpen(index: number) {
 
         <div class="flex flex-col gap-y-10 items-center my-16">
             <ExperienceCard
-                v-for="(experience, index) in experiences"
+                v-for="(experience) in experiences"
                 :key="experience.company"
                 :logo-src="experience.logoSrc"
                 :company="experience.company"
                 :company-logo-main-color="experience.logoMainColor"
-                :is-open="currentIsOpen === index"
                 :company-website-url="experience.companyWebsiteUrl"
-                @click="handleOpen(index)"
             >
                 <template #position>
                     {{ experience.position }}
