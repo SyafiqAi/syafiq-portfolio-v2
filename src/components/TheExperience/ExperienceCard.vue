@@ -2,6 +2,7 @@
 import { type VueElement } from "vue";
 import TheAccordion from "../Common/TheAccordion.vue";
 import ExternalLinkIcon from "../icons/ExternalLinkIcon.vue";
+import CaretDownIcon from "../icons/CaretDownIcon.vue";
 
 export interface Experience {
     company: string;
@@ -21,7 +22,7 @@ const { logoSrc, company, companyLogoMainColor } = defineProps<{
 
 <template>
     <div
-        :class="`p-7 md:p-14 md:py-10 flex flex-col bg-neutral-800 w-[90vw] md:w-[500px] mx-2 rounded-xl shadow-2xl transition-all duration-300 shadow-black group cursor-pointer ${companyLogoMainColor}`"
+        :class="`p-7 md:px-14 md:pt-10 flex flex-col bg-neutral-800 w-[90vw] md:w-[500px] mx-2 rounded-xl shadow-2xl transition-all duration-300 shadow-black group cursor-pointer ${companyLogoMainColor}`"
     >
         <div class="flex gap-4 justify-center items-center">
             <img
@@ -64,6 +65,7 @@ const { logoSrc, company, companyLogoMainColor } = defineProps<{
                 <slot></slot>
             </div>
         </TheAccordion>
+        <CaretDownIcon :class="`h-2 mt-6 ${isOpen && 'rotate-180'} transition-transform duration-500`"/>
     </div>
 </template>
 
