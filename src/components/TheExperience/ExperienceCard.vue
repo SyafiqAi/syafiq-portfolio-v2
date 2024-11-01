@@ -29,7 +29,7 @@ onMounted(() => {
 
 <template>
     <div
-        :class="`relative p-7 sm:px-14 sm:py-10 flex flex-col bg-neutral-800 w-[90vw] sm:w-[500px] mx-2 rounded-xl shadow-2xl transition-all duration-300 ${isOpen && 'shadow-[color:--shadow-color]'} hover:shadow-[color:--shadow-color] group cursor-pointer`"
+        :class="`relative p-7 sm:px-14 sm:py-10 flex flex-col bg-neutral-800 w-[90vw] sm:w-[500px] mx-2 rounded-xl shadow-2xl transition-all duration-300 ${isOpen && 'shadow-[color:--shadow-color]'} sm:hover:shadow-[color:--shadow-color] group cursor-pointer`"
         ref="card-ref"
         @click="isOpen = !isOpen"
     >
