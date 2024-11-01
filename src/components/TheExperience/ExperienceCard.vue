@@ -73,7 +73,7 @@ onMounted(() => {
             </div>
         </TheAccordion>
         <CaretDownIcon
-            :class="`h-2 mt-6 ${isOpen && 'rotate-180'} transition-transform duration-500`"
+            :class="`h-2 mt-6 ${isOpen && 'rotate-180'} transition-transform duration-500 opacity-50`"
         />
     </div>
 </template>
