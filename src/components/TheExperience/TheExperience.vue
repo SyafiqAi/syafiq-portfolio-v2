@@ -28,7 +28,7 @@ const rfLaiyonExperience: Experience = {
         "Self-learned React, Next.js, Node.js, Laravel.",
     ],
     logoSrc: rfLogo,
-    logoMainColor: "hover:shadow-[#49c0a0ff]", // TODO should only be the color hex.
+    logoMainColor: "#49c0a0ff",
     companyWebsiteUrl: "https://rflaiyon.com/",
 };
 
@@ -44,7 +44,7 @@ const dsmExperience: Experience = {
         "Self-learned Vue.js, Nuxt.js.",
     ],
     logoSrc: dsmLogo,
-    logoMainColor: "hover:shadow-[#ff0000ff]",
+    logoMainColor: "#ff0000ff",
     companyWebsiteUrl: "https://www.dsm.com.my/",
 };
 const alphaRedExperience: Experience = {
@@ -55,7 +55,7 @@ const alphaRedExperience: Experience = {
         "TBA. ",
     ],
     logoSrc: alphaLogo,
-    logoMainColor: "hover:shadow-[#d14437ff]",
+    logoMainColor: "#d14437ff",
     companyWebsiteUrl: "https://www.alphareds.com/",
 };
 

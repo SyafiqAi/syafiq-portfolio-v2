@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { type VueElement } from "vue";
+import { onMounted, useTemplateRef, type VueElement } from "vue";
 import TheAccordion from "../Common/TheAccordion.vue";
-import ExternalLinkIcon from "../icons/ExternalLinkIcon.vue";
 import CaretDownIcon from "../icons/CaretDownIcon.vue";
+import ExternalLinkIcon from "../icons/ExternalLinkIcon.vue";
 
 export interface Experience {
     company: string;
@@ -18,11 +18,18 @@ const { logoSrc, company, companyLogoMainColor } = defineProps<{
     isOpen: boolean;
     companyWebsiteUrl: string;
 }>();
+
+const cardRef = useTemplateRef("card-ref");
+
+onMounted(() => {
+    cardRef.value?.style.setProperty("--shadow-color", companyLogoMainColor);
+});
 </script>
 
 <template>
     <div
-        :class="`p-7 md:px-14 md:pt-10 flex flex-col bg-neutral-800 w-[90vw] md:w-[500px] mx-2 rounded-xl shadow-2xl transition-all duration-300 shadow-black group cursor-pointer ${companyLogoMainColor}`"
+        :class="`p-7 md:px-14 md:pt-10 flex flex-col bg-neutral-800 w-[90vw] md:w-[500px] mx-2 rounded-xl shadow-2xl transition-all duration-300 ${isOpen && 'shadow-[color:--shadow-color]'} hover:shadow-[color:--shadow-color] group cursor-pointer`"
+        ref="card-ref"
     >
         <div class="flex gap-4 justify-center items-center">
             <img
@@ -50,10 +57,10 @@ const { logoSrc, company, companyLogoMainColor } = defineProps<{
                             }
                         "
                     >
-                    <div class="flex place-items-center gap-1">
-                        {{ company }} 
-                        <ExternalLinkIcon class="h-4 w-fit" />
-                    </div>
+                        <div class="flex place-items-center gap-1">
+                            {{ company }}
+                            <ExternalLinkIcon class="h-4 w-fit" />
+                        </div>
                     </a>
                 </div>
             </div>
@@ -65,8 +72,14 @@ const { logoSrc, company, companyLogoMainColor } = defineProps<{
                 <slot></slot>
             </div>
         </TheAccordion>
-        <CaretDownIcon :class="`h-2 mt-6 ${isOpen && 'rotate-180'} transition-transform duration-500`"/>
+        <CaretDownIcon
+            :class="`h-2 mt-6 ${isOpen && 'rotate-180'} transition-transform duration-500`"
+        />
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+:root {
+    --shadow-color: #000000;
+}
+</style>
