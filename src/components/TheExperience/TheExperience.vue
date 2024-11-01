@@ -50,16 +50,13 @@ const alphaRedExperience: Experience = {
     position: "Back-End Web Developer",
     company: "Alpha Red Solutions",
     date: "Nov 14 2024 - Present",
-    content: [
-        "TBA. ",
-    ],
+    content: ["TBA. "],
     logoSrc: alphaLogo,
     logoMainColor: "#d14437ff",
     companyWebsiteUrl: "https://www.alphareds.com/",
 };
 
 const experiences = [alphaRedExperience, rfLaiyonExperience, dsmExperience];
-
 </script>
 
 <template>
@@ -70,18 +67,15 @@ const experiences = [alphaRedExperience, rfLaiyonExperience, dsmExperience];
 
         <div class="flex flex-col gap-y-10 items-center my-16">
             <ExperienceCard
-                v-for="(experience) in experiences"
+                v-for="experience in experiences"
                 :key="experience.company"
                 :logo-src="experience.logoSrc"
                 :company="experience.company"
                 :company-logo-main-color="experience.logoMainColor"
                 :company-website-url="experience.companyWebsiteUrl"
+                :position="experience.position"
+                :date="experience.date"
             >
-                <template #position>
-                    {{ experience.position }}
-                </template>
-                <template #company> {{ experience.company }}</template>
-                <template #date> {{ experience.date }}</template>
                 <ul>
                     <li
                         v-for="(item, index) in experience.content"

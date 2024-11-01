@@ -16,6 +16,8 @@ const { logoSrc, company, companyLogoMainColor } = defineProps<{
     company: string;
     companyLogoMainColor: string;
     companyWebsiteUrl: string;
+    date: string;
+    position: string;
 }>();
 
 const isOpen = ref(false);
@@ -33,9 +35,9 @@ onMounted(() => {
         ref="card-ref"
         @click="isOpen = !isOpen"
     >
-            <CaretDownIcon
-                :class="`absolute top-4 right-4 h-2 ${isOpen && 'rotate-180'} transition-transform duration-500 opacity-50`"
-            />
+        <CaretDownIcon
+            :class="`absolute top-4 right-4 h-2 ${isOpen && 'rotate-180'} transition-transform duration-500 opacity-50`"
+        />
         <div class="flex gap-4 justify-center items-center">
             <img
                 :src="logoSrc"
@@ -44,11 +46,11 @@ onMounted(() => {
             />
             <div class="w-fit">
                 <div class="text-xs">
-                    <slot name="date"></slot>
+                    {{ date }}
                 </div>
 
                 <div class="text-base sm:text-2xl">
-                    <slot name="position"></slot>
+                    {{ position }}
                 </div>
 
                 <div class="flex justify-end text-xs sm:text-base">
