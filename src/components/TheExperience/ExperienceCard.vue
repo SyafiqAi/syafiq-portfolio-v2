@@ -23,13 +23,12 @@ const { logoSrc, company, companyLogoMainColor } = defineProps<{
     <div
         :class="`p-7 md:p-14 md:py-10 flex flex-col bg-neutral-800 w-[90vw] md:w-[500px] mx-2 rounded-xl shadow-2xl transition-all duration-300 shadow-black group cursor-pointer ${companyLogoMainColor}`"
     >
-        <div class="flex justify-center items-center">
+        <div class="flex gap-4 justify-center items-center">
             <img
                 :src="logoSrc"
                 :alt="`${company} logo`"
                 class="max-h-20 max-w-20 rounded-2xl"
             />
-            <div class="w-4"></div>
             <div class="w-fit">
                 <div class="text-xs">
                     <slot name="date"></slot>
