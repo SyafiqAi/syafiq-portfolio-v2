@@ -51,8 +51,7 @@ const educationList = [utar, uniten];
                 :logo="education.logo"
                 :website="education.website"
                 :logoMainColor="education.logoMainColor"
-            >
-            </EducationCard>
+            />
         </div>
     </TheSection>
 </template>
