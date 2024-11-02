@@ -10,13 +10,13 @@ import typescriptIcon from "@/assets/logos/typescript-icon.svg"
 </script>
 
 <template>
-    <div class="min-h-lvh font-extralight text-sm flex flex-col justify-center">
+    <div class="min-h-lvh flex flex-col justify-center">
         <div class="flex justify-center items-center">
             <SectionTitle>My Tech Stack</SectionTitle>
         </div>
         <div class="size-full flex justify-center items-center my-16">
             <div
-                class="grid grid-rows-3 md:grid-rows-2 grid-cols-2 md:grid-cols-3 size-fit gap-x-10 md:gap-x-40 gap-y-10 md:gap-y-28"
+                class="grid grid-rows-3 md:grid-rows-2 grid-cols-2 md:grid-cols-3 size-fit gap-x-10 md:gap-x-40 gap-y-10 md:gap-y-28 font-extralight text-sm"
             >
                 <TechnologyCard
                     technology="Node.js"

@@ -61,7 +61,7 @@ const experiences = [alphaRedExperience, rfLaiyonExperience, dsmExperience];
 
 <template>
     <div class="my-20 mb-48">
-        <SectionTitle class="flex justify-center mt-10 w-full font-extralight">
+        <SectionTitle class="flex justify-center mt-10 w-full">
             Experience
         </SectionTitle>
 
