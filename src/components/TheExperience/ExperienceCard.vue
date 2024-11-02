@@ -36,7 +36,7 @@ onMounted(() => {
         @click="isOpen = !isOpen"
     >
         <CaretDownIcon
-            :class="`absolute top-4 right-4 h-2 ${isOpen && 'rotate-180'} transition-transform duration-500 opacity-50`"
+            :class="`absolute top-4 right-4 h-2 ${isOpen && 'rotate-180'} transition-transform duration-500 opacity-50 group-hover:opacity-100`"
         />
         <div class="flex gap-4 justify-center items-center">
             <img
@@ -44,7 +44,7 @@ onMounted(() => {
                 :alt="`${company} logo`"
                 class="max-h-20 max-w-20 rounded-2xl"
             />
-            <div class="w-fit">
+            <div class="w-full">
                 <div class="text-xs">
                     {{ date }}
                 </div>
