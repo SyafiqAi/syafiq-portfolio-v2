@@ -16,12 +16,12 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="card-container group">
+    <div class="flex justify-center items-center relative group">
         <div
             ref="shadowRef"
             class="shadow-lg group-hover:shadow-xl group-hover:animate-pulse rounded-xl size-full absolute shadow-black transition-shadow duration-500 group-hover:shadow-[var(--shadow-color)]"
         />
-        <TiltCard class="card">
+        <TiltCard class="h-24 w-24 p-4 text-center align-text-bottom transition-colors duration-300 rounded-xl bg-neutral-800 flex flex-col justify-between select-none">
             <img :src="src" class="h-8" />
             <p>
                 {{ technology }}
@@ -30,12 +30,4 @@ onMounted(() => {
     </div>
 </template>
 
-<style scoped lang="postcss">
-.card {
-    @apply h-24 w-24 p-4 text-center align-text-bottom transition-colors duration-300 rounded-xl bg-neutral-800 flex flex-col justify-between select-none;
-}
-
-.card-container {
-    @apply flex justify-center items-center relative;
-}
-</style>
+<style scoped></style>
