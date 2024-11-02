@@ -4,6 +4,7 @@ import dsmLogo from "@/assets/logos/dsm.png";
 import rfLogo from "@/assets/logos/rflaiyon.png";
 import TheSection from "../Common/TheSection.vue";
 import ExperienceCard from "./ExperienceCard.vue";
+import CardList from "../Common/CardList.vue";
 interface Experience {
     position: string;
     company: string;
@@ -61,7 +62,7 @@ const experiences = [alphaRedExperience, rfLaiyonExperience, dsmExperience];
 
 <template>
     <TheSection title="Experience">
-        <div class="flex flex-col gap-y-10 items-center">
+        <CardList>
             <ExperienceCard
                 v-for="experience in experiences"
                 :key="experience.company"
@@ -82,7 +83,7 @@ const experiences = [alphaRedExperience, rfLaiyonExperience, dsmExperience];
                     </li>
                 </ul>
             </ExperienceCard>
-        </div>
+        </CardList>
     </TheSection>
 </template>
 

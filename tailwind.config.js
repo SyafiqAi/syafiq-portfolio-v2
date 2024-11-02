@@ -9,6 +9,9 @@ export default {
             margin: {
                 sectionTitle: "6rem"
             },
+            gap: {
+                cardList: '3rem'
+            }
         },
         fontFamily: {
             sans: "Raleway",

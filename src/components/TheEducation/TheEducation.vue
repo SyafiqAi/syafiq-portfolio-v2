@@ -3,6 +3,7 @@ import unitenLogo from "@/assets/logos/uniten-logo.png";
 import utarLogo from "@/assets/logos/utar-logo.png";
 import TheSection from "../Common/TheSection.vue";
 import EducationCard from "./EducationCard.vue";
+import CardList from "../Common/CardList.vue";
 
 interface Education {
     university: string;
@@ -40,7 +41,7 @@ const educationList = [utar, uniten];
 
 <template>
     <TheSection title="Education">
-        <div class="w-full flex items-center flex-col gap-10">
+        <CardList>
             <EducationCard
                 v-for="education in educationList"
                 :key="education.university"
@@ -52,7 +53,7 @@ const educationList = [utar, uniten];
                 :website="education.website"
                 :logoMainColor="education.logoMainColor"
             />
-        </div>
+        </CardList>
     </TheSection>
 </template>
 
