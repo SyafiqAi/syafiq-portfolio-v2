@@ -9,9 +9,7 @@ import TheContacts from "./TheContacts.vue";
     >
         <div class="flex flex-col items-center group py-32">
             <span class="font-extralight mb-2">Syafiq</span>
-            <h1
-                class="font-black text-4xl md:text-6xl lg:text-9xl text-nowrap max-w-[100lvw]"
-            >
+            <h1 class="font-black text-[9vw] text-nowrap max-w-[100lvw]">
                 <GradientText>Web Developer</GradientText>
             </h1>
             <TheContacts />
