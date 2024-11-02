@@ -38,7 +38,7 @@ onMounted(() => {
         <CaretDownIcon
             :class="`absolute top-4 right-4 h-2 ${isOpen && 'rotate-180'} transition-transform duration-500 opacity-50 group-hover:opacity-100`"
         />
-        <div class="flex gap-4 justify-center items-center">
+        <div class="flex gap-4 justify-center items-center font-light md:font-extralight">
             <img
                 :src="logoSrc"
                 :alt="`${company} logo`"

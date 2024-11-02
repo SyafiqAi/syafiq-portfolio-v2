@@ -28,7 +28,7 @@ onMounted(() => {
             <ExternalLinkIcon
                 class="h-4 w-fit absolute top-4 right-4 opacity-50 group-hover:opacity-100 transition-opacity"
             />
-            <div class="flex gap-4 justify-center items-center">
+            <div class="flex gap-4 justify-center items-center font-light md:font-extralight">
                 <img
                     :src="logo"
                     :alt="`${university} logo`"
