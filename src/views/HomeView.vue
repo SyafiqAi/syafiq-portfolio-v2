@@ -17,7 +17,7 @@ import TheTechnologies from "@/components/TheTechnologies/TheTechnologies.vue";
             <TheExperience />
             <TheEducation />
         </main>
-        <footer>
+        <footer class="mt-56">
             <TheFooter />
         </footer>
     </div>

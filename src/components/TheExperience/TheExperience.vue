@@ -2,7 +2,7 @@
 import alphaLogo from "@/assets/logos/alphared.png";
 import dsmLogo from "@/assets/logos/dsm.png";
 import rfLogo from "@/assets/logos/rflaiyon.png";
-import SectionTitle from "../SectionTitle.vue";
+import TheSection from "../Common/TheSection.vue";
 import ExperienceCard from "./ExperienceCard.vue";
 interface Experience {
     position: string;
@@ -60,12 +60,8 @@ const experiences = [alphaRedExperience, rfLaiyonExperience, dsmExperience];
 </script>
 
 <template>
-    <div class="my-20 mb-48">
-        <SectionTitle class="flex justify-center mt-10 w-full">
-            Experience
-        </SectionTitle>
-
-        <div class="flex flex-col gap-y-10 items-center my-16">
+    <TheSection title="Experience">
+        <div class="flex flex-col gap-y-10 items-center">
             <ExperienceCard
                 v-for="experience in experiences"
                 :key="experience.company"
@@ -87,7 +83,7 @@ const experiences = [alphaRedExperience, rfLaiyonExperience, dsmExperience];
                 </ul>
             </ExperienceCard>
         </div>
-    </div>
+    </TheSection>
 </template>
 
 <style scoped></style>

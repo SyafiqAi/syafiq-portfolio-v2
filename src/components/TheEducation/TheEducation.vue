@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import unitenLogo from "@/assets/logos/uniten-logo.png";
 import utarLogo from "@/assets/logos/utar-logo.png";
-import SectionTitle from "../SectionTitle.vue";
+import TheSection from "../Common/TheSection.vue";
 import EducationCard from "./EducationCard.vue";
 
 interface Education {
@@ -39,11 +39,7 @@ const educationList = [utar, uniten];
 </script>
 
 <template>
-    <div class="min-h-[100vh]">
-        <div class="text-center my-24">
-            <SectionTitle>Education</SectionTitle>
-        </div>
-
+    <TheSection title="Education">
         <div class="w-full flex items-center flex-col gap-10">
             <EducationCard
                 v-for="education in educationList"
@@ -58,7 +54,7 @@ const educationList = [utar, uniten];
             >
             </EducationCard>
         </div>
-    </div>
+    </TheSection>
 </template>
 
 <style scoped></style>

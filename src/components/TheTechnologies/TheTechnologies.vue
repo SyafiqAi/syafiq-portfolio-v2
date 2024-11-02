@@ -1,20 +1,17 @@
 <script setup lang="ts">
-import SectionTitle from "../SectionTitle.vue";
+import gitIcon from "@/assets/logos/git-icon.svg";
+import nextIcon from "@/assets/logos/next-icon.svg";
+import nodeIcon from '@/assets/logos/node-icon.svg';
+import reactIcon from "@/assets/logos/react-icon.svg";
+import typescriptIcon from "@/assets/logos/typescript-icon.svg";
+import vueIcon from "@/assets/logos/vue-icon.svg";
+import TheSection from "../Common/TheSection.vue";
 import TechnologyCard from "./TechnologyCard.vue";
-import nodeIcon from '@/assets/logos/node-icon.svg'
-import reactIcon from "@/assets/logos/react-icon.svg"
-import nextIcon from "@/assets/logos/next-icon.svg"
-import gitIcon from "@/assets/logos/git-icon.svg"
-import vueIcon from "@/assets/logos/vue-icon.svg"
-import typescriptIcon from "@/assets/logos/typescript-icon.svg"
 </script>
 
 <template>
-    <div class="min-h-lvh flex flex-col justify-center">
-        <div class="flex justify-center items-center">
-            <SectionTitle>My Tech Stack</SectionTitle>
-        </div>
-        <div class="size-full flex justify-center items-center my-16">
+    <TheSection title="My Skills">
+        <div class="size-full flex justify-center items-center">
             <div
                 class="grid grid-rows-3 md:grid-rows-2 grid-cols-2 md:grid-cols-3 size-fit gap-x-10 md:gap-x-40 gap-y-10 md:gap-y-28 font-extralight text-sm"
             >
@@ -50,5 +47,5 @@ import typescriptIcon from "@/assets/logos/typescript-icon.svg"
                 />
             </div>
         </div>
-    </div>
+    </TheSection>
 </template>
