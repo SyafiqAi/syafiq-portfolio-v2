@@ -5,11 +5,11 @@ import TheContacts from "./TheContacts.vue";
 
 <template>
     <div
-        class="flex items-center justify-center min-h-svh select-none flex-col"
+        class="flex items-center justify-center h-lvh select-none flex-col"
     >
         <div class="flex flex-col items-center group py-32">
             <span class="font-extralight mb-2">Syafiq</span>
-            <h1 class="font-black text-[9vw] text-nowrap max-w-[100lvw]">
+            <h1 class="font-extralight text-[9vw] text-nowrap max-w-[100lvw]">
                 <GradientText>Web Developer</GradientText>
             </h1>
             <TheContacts />
