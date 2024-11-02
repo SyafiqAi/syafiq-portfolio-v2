@@ -19,7 +19,7 @@ onMounted(() => {
     <div class="card-container group">
         <div
             ref="shadowRef"
-            class="shadow-lg group-hover:shadow-xl group-hover:animate-pulse rounded-lg size-full absolute shadow-black transition-shadow duration-500 group-hover:shadow-[var(--shadow-color)]"
+            class="shadow-lg group-hover:shadow-xl group-hover:animate-pulse rounded-xl size-full absolute shadow-black transition-shadow duration-500 group-hover:shadow-[var(--shadow-color)]"
         />
         <TiltCard class="card">
             <img :src="src" class="h-8" />
