@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import TheEducation from "@/components/TheEducation/TheEducation.vue";
 import TheExperience from "@/components/TheExperience/TheExperience.vue";
 import TheFooter from "@/components/TheFooter.vue";
 import TheName from "@/components/TheName/TheName.vue";
@@ -14,6 +15,7 @@ import TheTechnologies from "@/components/TheTechnologies/TheTechnologies.vue";
             <TheName />
             <TheTechnologies />
             <TheExperience />
+            <TheEducation />
         </main>
         <footer>
             <TheFooter />
