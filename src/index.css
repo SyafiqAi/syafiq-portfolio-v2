@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-3xl font-bold my-[30px];
+  }
+  h2 {
+    @apply text-2xl font-bold my-[20px];
+  }
+  h3 {
+    @apply text-xl font-bold my-[10px];
+  }
+}
