@@ -1,7 +1,7 @@
 interface Experience {
     company: string;
     startDate: string;
-    endDate: string;
+    endDate?: string;
     duration: string;
     content: string[];
 }
@@ -9,7 +9,7 @@ interface Experience {
 const alphaRed: Experience = {
     company: "Alpha Red Solutions",
     startDate: "Nov 2024",
-    endDate: "",
+    // endDate: ,
     duration: "",
     content: [
         "Back-end Web Development",

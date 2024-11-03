@@ -1,12 +1,12 @@
 <script setup lang="ts">
-const { title } = defineProps<{ title: string }>();
+const { title } = defineProps<{ title?: string }>();
 </script>
 
 <template>
-    <div>
-        <h2>{{ title }}</h2>
+    <section class="ml-[20px]">
+        <h2 v-if="!!title">{{ title }}</h2>
         <slot></slot>
-    </div>
+    </section>
 </template>
 
 <style scoped></style>

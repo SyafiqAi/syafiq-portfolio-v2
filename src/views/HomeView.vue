@@ -6,7 +6,7 @@ import ExperienceSection from '@/components/Sections/ExperienceSection.vue';
 
 <template>
         <div >
-            <main class="mx-auto sm py-[100px] max-w-[640px]">
+            <main class="mx-auto sm px-[40px] py-[100px] max-w-[640px]">
                 <h1>Syafiq's Portfolio</h1>
                 <p>I do web stuff.</p>
                 <ExperienceSection />
