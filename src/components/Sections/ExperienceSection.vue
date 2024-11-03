@@ -9,12 +9,14 @@ import { experiences } from "@/data/experience";
         <TheSection
             v-for="(experience, index) in experiences"
             :key="index"
-            :class="index !== 0 && 'mt-14'"
-        >
-            <p class="text-xs">
+            :class="(index !== 0 && 'pt-8') + ' relative'"
+            >
+            <div class="border-l-2 border-black w-[full] absolute -left-[17px] -bottom-1 h-full"> </div>
+            <div class="text-xs relative">
+                <div class="size-2 absolute bg-black top-1 -left-5 rounded-full"></div>
                 {{ experience.startDate }} -
                 {{ experience.endDate ?? "Present" }}
-            </p>
+            </div>
             <h3>{{ experience.company }}</h3>
             <ul>
                 <li
