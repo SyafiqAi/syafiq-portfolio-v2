@@ -13,9 +13,6 @@ export default {
                 cardList: '3rem'
             }
         },
-        fontFamily: {
-            sans: "Raleway",
-        },
     },
     plugins: [],
 };
