@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import '@/assets/main.css'
 import ExperienceSection from '@/components/Sections/ExperienceSection.vue';
+import SkillsSection from '@/components/Sections/SkillsSection.vue';
 
 </script>
 
@@ -10,6 +11,7 @@ import ExperienceSection from '@/components/Sections/ExperienceSection.vue';
                 <h1>Syafiq's Portfolio</h1>
                 <p>I do web stuff.</p>
                 <ExperienceSection />
+                <SkillsSection />
             </main>
         </div>
 </template>
