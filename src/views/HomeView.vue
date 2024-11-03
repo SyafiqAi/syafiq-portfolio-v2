@@ -2,17 +2,21 @@
 import '@/assets/main.css'
 import ExperienceSection from '@/components/Sections/ExperienceSection.vue';
 import SkillsSection from '@/components/Sections/SkillsSection.vue';
+import TheFooter from '@/components/Sections/TheFooter.vue';
 
 </script>
 
 <template>
-        <div >
-            <main class="mx-auto sm px-[40px] py-[100px] max-w-[640px]">
+        <div class="mx-auto sm px-[40px] py-[100px] max-w-[640px]">
+            <main >
                 <h1>Syafiq's Portfolio</h1>
                 <p>I do web stuff.</p>
                 <ExperienceSection />
                 <SkillsSection />
             </main>
+            <footer>
+                <TheFooter />
+            </footer>
         </div>
 </template>
 
