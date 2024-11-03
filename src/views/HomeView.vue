@@ -1,24 +1,9 @@
 <script setup lang="ts">
-import TheEducation from "@/components/TheEducation/TheEducation.vue";
-import TheExperience from "@/components/TheExperience/TheExperience.vue";
-import TheFooter from "@/components/TheFooter.vue";
-import TheName from "@/components/TheName/TheName.vue";
-import TheTechnologies from "@/components/TheTechnologies/TheTechnologies.vue";
 </script>
 
 <template>
-    <div>
-        <main class="relative">
-            <aside>
-                <!-- <SideContacts /> -->
-            </aside>
-            <TheName />
-            <TheTechnologies />
-            <TheExperience />
-            <TheEducation />
+        <main class="p-[100px]">
+            <h1 class="text-2xl font-bold mb-[20px]">Syafiq's Portfolio</h1>
+            <p>I do web stuff.</p>
         </main>
-        <footer class="mt-28">
-            <TheFooter />
-        </footer>
-    </div>
 </template>
