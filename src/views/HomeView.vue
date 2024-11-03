@@ -7,16 +7,19 @@ import TheFooter from '@/components/Sections/TheFooter.vue';
 </script>
 
 <template>
-        <div class="mx-auto sm px-[40px] py-[100px] max-w-[640px]">
-            <main >
-                <h1>Syafiq's Portfolio</h1>
-                <p>I do web stuff.</p>
-                <ExperienceSection />
-                <SkillsSection />
-            </main>
-            <footer>
-                <TheFooter />
-            </footer>
+
+        <div class="bg-white py-[100px]">
+            <div class="mx-auto sm px-[40px] py-[50px] max-w-[640px] drop-shadow-2xl shadow-black bg-white rounded-2xl">
+                <main >
+                    <h1>Syafiq's Portfolio</h1>
+                    <p>I do web stuff.</p>
+                    <ExperienceSection />
+                    <SkillsSection />
+                </main>
+                <footer>
+                    <TheFooter />
+                </footer>
+            </div>
         </div>
 </template>
 

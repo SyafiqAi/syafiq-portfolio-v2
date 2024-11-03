@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-    <div class="my-[50px] flex flex-col items-center md:flex-row md:gap-6">
+    <div class="my-[50px] flex flex-col items-center md:flex-row md:gap-6 md:justify-center">
         <span>isyafiq@gmail.com</span>
         <span
             ><a
