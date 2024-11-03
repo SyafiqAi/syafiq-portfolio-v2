@@ -18,7 +18,7 @@ import { experiences } from "@/data/experience";
                 {{ experience.endDate ?? "Present" }}
             </div>
             <h3>{{ experience.company }}</h3>
-            <ul>
+            <ul class="ml-6">
                 <li
                     v-for="(item, index) in experience.content"
                     :key="index + item"
