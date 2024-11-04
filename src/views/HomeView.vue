@@ -1,24 +1,23 @@
 <script setup lang="ts">
-import '@/assets/main.css'
-import ExperienceSection from '@/components/Sections/ExperienceSection.vue';
-import SkillsSection from '@/components/Sections/SkillsSection.vue';
-import TheFooter from '@/components/Sections/TheFooter.vue';
-
+import "@/assets/main.css";
+import ExperienceSection from "@/components/Sections/ExperienceSection.vue";
+import SkillsSection from "@/components/Sections/SkillsSection.vue";
+import TheFooter from "@/components/Sections/TheFooter.vue";
 </script>
 
 <template>
-        <div class="mx-auto sm px-[40px] py-[30px] md:py-[100px] max-w-[640px]">
-            <main >
-                <h1>Syafiq's Portfolio</h1>
-                <p>I do web stuff.</p>
-                <ExperienceSection />
-                <SkillsSection />
-            </main>
-            <footer>
-                <TheFooter />
-            </footer>
-        </div>
+    <div class="mx-auto sm px-[40px] py-[30px] md:py-[100px] max-w-[640px]">
+        <main>
+            <h1>Syafiq's Portfolio</h1>
+            <p>I do web stuff.</p>
+            <ExperienceSection />
+            <SkillsSection />
+        </main>
+        <hr class="mt-20" />
+        <footer>
+            <TheFooter />
+        </footer>
+    </div>
 </template>
 
-<style lang="postcss">
-</style>
+<style lang="postcss"></style>
