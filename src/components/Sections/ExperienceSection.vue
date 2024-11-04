@@ -12,7 +12,7 @@ const open = ref<number>(-1);
 
         <div class="relative">
             <div
-                class="border-l-[1px] border-gray-200 absolute left-0 top-2 h-full"
+                class="border-l-[1px] border-gray-400 absolute left-0 top-2 h-full"
             ></div>
             <TheSection
                 v-for="(experience, index) in experiences"
@@ -21,7 +21,7 @@ const open = ref<number>(-1);
             >
                 <div class="text-xs relative">
                     <div
-                        class="size-[7px] absolute bg-gray-400 top-1 -left-[23px] rounded-full"
+                        class="size-[7px] absolute bg-gray-600 top-1 -left-[23px] rounded-full"
                     ></div>
                     {{ experience.startDate }} -
                     {{ experience.endDate ?? "Present" }}
