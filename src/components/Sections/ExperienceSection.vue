@@ -22,8 +22,8 @@ import { experiences } from "@/data/experience";
                     {{ experience.endDate ?? "Present" }}
                 </div>
                 <h3>{{ experience.position }}</h3>
-                <ul class="ml-md">
-                    <li>
+                <ul class="">
+                    <li class="mb-2 text-sm sm:text-base">
                         <a :href="experience.website">
                             {{ experience.company }}
                         </a>
@@ -31,6 +31,7 @@ import { experiences } from "@/data/experience";
                     <li
                         v-for="(item, index) in experience.content"
                         :key="index + item"
+                        class="mb-2 text-sm sm:text-base"
                     >
                         {{ item }}
                     </li>

@@ -13,7 +13,7 @@ const alphaRed: Experience = {
     startDate: "Nov 2024",
     // endDate: ,
     duration: "",
-    content: ["Back-end Web Development", "Node.js", "Fintech"],
+    content: ["Node.js", "Fintech"],
     position: "Back-end Web Developer",
     website: "https://www.alphareds.com/",
 };
@@ -23,9 +23,18 @@ const rf: Experience = {
     startDate: "May 2024",
     endDate: "Nov 2024",
     duration: "6 months",
-    content: ["Front-end Web Development", "React.js", "Education Sector"],
     position: "Front-end Web Developer",
     website: "https://rflaiyon.com/",
+    content: [
+        "React.js",
+        "Education Sector",
+        "Front-end development using React, Next.js.",
+        "Worked closely with back-end developers to integrate RESTful APIs.",
+        "Learned authorisation using JWT.",
+        "CI/CD development.",
+        "Contributed to the development of a textbook management system for the public education sector.",
+        "Self-learned React, Next.js, Node.js, Laravel.",
+    ],
 };
 
 const dsm: Experience = {
@@ -33,9 +42,17 @@ const dsm: Experience = {
     startDate: "Oct 2022",
     endDate: "Jan 2023",
     duration: "3 months",
-    content: ["Front-end Web Development", "Vue.js", "Logistics"],
     position: "Front-end Web Developer",
     website: "https://www.dsm.com.my/",
+    content: [
+        "Vue.js",
+        "Logistics",
+        "Front-end development using Vue.js. ",
+        "Worked in a team of 7 developers in an agile development method using Microsoft Azure (DevOps).",
+        "Contributed to the development of an ERP suite for trucking companies.",
+        "Exposure to CI/CD development.",
+        "Self-learned Vue.js, Nuxt.js.",
+    ],
 };
 
 const experiences = [alphaRed, rf, dsm];
