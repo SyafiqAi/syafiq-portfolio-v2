@@ -7,7 +7,7 @@ import EducationSection from "@/components/Sections/EducationSection.vue";
 </script>
 
 <template>
-    <div class="mx-auto sm px-[40px] py-[30px] md:py-[100px] max-w-[640px]">
+    <div class="mx-auto sm px-10 pt-8 max-w-[640px]">
         <main>
             <h1>Syafiq's Portfolio</h1>
             <p>I do web stuff.</p>
