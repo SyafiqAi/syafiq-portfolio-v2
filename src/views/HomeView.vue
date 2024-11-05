@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import "@/assets/main.css";
+import EducationSection from "@/components/Sections/EducationSection.vue";
 import ExperienceSection from "@/components/Sections/ExperienceSection.vue";
 import SkillsSection from "@/components/Sections/SkillsSection.vue";
 import TheFooter from "@/components/Sections/TheFooter.vue";
-import EducationSection from "@/components/Sections/EducationSection.vue";
 </script>
 
 <template>
@@ -15,7 +15,7 @@ import EducationSection from "@/components/Sections/EducationSection.vue";
             <SkillsSection />
             <EducationSection />
         </main>
-        <hr class="mt-20" />
+        <hr class="my-section" />
         <footer>
             <TheFooter />
         </footer>
