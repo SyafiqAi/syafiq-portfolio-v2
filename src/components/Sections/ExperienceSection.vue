@@ -4,7 +4,7 @@ import { experiences } from "@/data/experience";
 </script>
 
 <template>
-    <TheSection title="Exprience">
+    <TheSection title="Experience">
         <div class="relative">
             <div
                 class="border-l-[1px] border-gray-400 absolute left-0 top-[5px] -ml-md h-[calc(100%-5px)]"
