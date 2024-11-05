@@ -5,6 +5,7 @@ interface Experience {
     duration: string;
     content: string[];
     position: string;
+    website: string;
 }
 
 const alphaRed: Experience = {
@@ -14,6 +15,7 @@ const alphaRed: Experience = {
     duration: "",
     content: ["Back-end Web Development", "Node.js", "Fintech"],
     position: "Back-end Web Developer",
+    website: "https://www.alphareds.com/",
 };
 
 const rf: Experience = {
@@ -23,6 +25,7 @@ const rf: Experience = {
     duration: "6 months",
     content: ["Front-end Web Development", "React.js", "Education Sector"],
     position: "Front-end Web Developer",
+    website: "https://rflaiyon.com/",
 };
 
 const dsm: Experience = {
@@ -32,6 +35,7 @@ const dsm: Experience = {
     duration: "3 months",
     content: ["Front-end Web Development", "Vue.js", "Logistics"],
     position: "Front-end Web Developer",
+    website: "https://www.dsm.com.my/",
 };
 
 const experiences = [alphaRed, rf, dsm];

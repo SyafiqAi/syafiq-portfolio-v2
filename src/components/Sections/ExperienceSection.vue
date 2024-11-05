@@ -23,7 +23,7 @@ import { experiences } from "@/data/experience";
                 </div>
                 <h3>{{ experience.position }}</h3>
                 <ul class="ml-6">
-                    <li><a href="">{{ experience.company }}</a></li>
+                    <li><a :href="experience.website" target="_blank">{{ experience.company }}</a></li>
                     <li
                         v-for="(item, index) in experience.content"
                         :key="index + item"
