@@ -4,18 +4,18 @@ import { education } from "@/data/education";
 </script>
 
 <template>
-    <div>
-        <h2>Education</h2>
-        <TheSection
+    <TheSection title="Education">
+        <div
             v-for="(ed, index) in education"
             :key="index + ed.university"
+            :class="index !== 0 && `relative mt-sectionCard`"
         >
             <p class="text-xs">{{ ed.date }}</p>
             <p>{{ ed.level }}</p>
             <p class="my-0 font-bold">{{ ed.program }}</p>
             <p>{{ ed.university }}</p>
-        </TheSection>
-    </div>
+        </div>
+    </TheSection>
 </template>
 
 <style scoped></style>

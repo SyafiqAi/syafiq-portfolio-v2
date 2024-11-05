@@ -12,7 +12,7 @@ import { experiences } from "@/data/experience";
             <div
                 v-for="(experience, index) in experiences"
                 :key="index"
-                :class="index !== 0 && `relative pt-8`"
+                :class="index !== 0 && `relative mt-sectionCard`"
             >
                 <div class="text-xs relative">
                     <div
