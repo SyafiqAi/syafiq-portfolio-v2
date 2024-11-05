@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import "@/assets/main.css";
 import EducationSection from "@/components/Sections/EducationSection.vue";
-import ExperienceSection from "@/components/Sections/ExperienceSection.vue";
+import ExperienceSection from "@/components/Sections/Experience/ExperienceSection.vue";
 import SkillsSection from "@/components/Sections/SkillsSection.vue";
 import TheFooter from "@/components/Sections/TheFooter.vue";
 </script>
