@@ -10,7 +10,7 @@ import TheFooter from "@/components/Sections/TheFooter.vue";
     <div class="mx-auto sm px-10 pt-8 max-w-[640px]">
         <main>
             <h1>Syafiq's Portfolio</h1>
-            <p>I do web stuff.</p>
+            <p class="mb-[30px]">I do web stuff.</p>
             <ExperienceSection />
             <SkillsSection />
             <EducationSection />
