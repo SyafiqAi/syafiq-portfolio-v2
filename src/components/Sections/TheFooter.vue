@@ -2,7 +2,7 @@
 
 <template>
     <div
-        class="my-16 flex flex-col items-center md:flex-row md:gap-6 md:justify-center"
+        class="my-section flex flex-col items-center md:flex-row md:gap-6 md:justify-center"
     >
         <span>isyafiq@gmail.com</span>
         <span
