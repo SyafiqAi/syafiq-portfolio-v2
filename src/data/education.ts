@@ -7,7 +7,7 @@ interface Education {
 
 const utar: Education = {
     university: "Universiti Tunku Abdul Rahman",
-    level: "B.Sc (Hons)",
+    level: "B.Sc. (Hons)",
     program: "Applied Mathematics with Computing",
     date: "2020 - 2024",
 };
