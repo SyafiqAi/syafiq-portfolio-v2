@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import { type Experience } from "./data/experience";
+import TheAccordion from "@/common/TheAccordion.vue";
 const props = defineProps<{ experience: Experience }>();
+const isOpen = ref(false);
 </script>
 
 <template>
@@ -19,13 +22,18 @@ const props = defineProps<{ experience: Experience }>();
                     {{ props.experience.company }}
                 </a>
             </li>
-            <li
-                v-for="(item, index) in props.experience.content"
-                :key="index + item"
-                class="mb-2 text-sm sm:text-base"
-            >
-                {{ item }}
-            </li>
+            <TheAccordion :is-open="isOpen">
+                <li
+                    v-for="(item, index) in props.experience.content"
+                    :key="index + item"
+                    class="mb-2 text-sm sm:text-base"
+                >
+                    {{ item }}
+                </li>
+            </TheAccordion>
+            <button @click="isOpen = !isOpen" class="text-sm">
+                {{ isOpen ? "Hide" : "Show more" }}
+            </button>
         </ul>
     </div>
 </template>
