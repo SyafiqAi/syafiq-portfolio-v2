@@ -7,7 +7,7 @@ import { experiences } from "@/data/experience";
     <TheSection title="Exprience">
         <div class="relative">
             <div
-                class="border-l-[1px] border-gray-400 absolute left-0 top-1 -ml-md h-full"
+                class="border-l-[1px] border-gray-400 absolute left-0 top-[5px] -ml-md h-[calc(100%-5px)]"
             ></div>
             <div
                 v-for="(experience, index) in experiences"
