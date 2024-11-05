@@ -4,14 +4,12 @@ import { experiences } from "@/data/experience";
 </script>
 
 <template>
-    <div>
-        <h2>Experience</h2>
-
+    <TheSection title="Exprience">
         <div class="relative">
             <div
-                class="border-l-[1px] border-gray-400 absolute left-0 top-2 h-full"
+                class="border-l-[1px] border-gray-400 absolute -left-[20px] top-2 h-full"
             ></div>
-            <TheSection
+            <div
                 v-for="(experience, index) in experiences"
                 :key="index"
                 :class="(index !== 0 && '') + ' pb-8 relative'"
@@ -32,9 +30,9 @@ import { experiences } from "@/data/experience";
                         {{ item }}
                     </li>
                 </ul>
-            </TheSection>
+            </div>
         </div>
-    </div>
+    </TheSection>
 </template>
 
 <style scoped></style>
