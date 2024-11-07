@@ -48,7 +48,7 @@ const isOpen = ref(props.opened ?? false);
                         class="mb-2 text-sm sm:text-base"
                     >
                     <div class="flex gap-2">
-                        <div class="size-1 mt-2 bg-green-500 rounded-full flex-shrink-0"></div>
+                        <div class="size-1 mt-2 md:mt-[11px] bg-green-500 rounded-full flex-shrink-0"></div>
                         <div>{{ item }}</div>
                     </div>
                     </li>
