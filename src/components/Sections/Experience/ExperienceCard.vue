@@ -13,7 +13,7 @@ const isOpen = ref(props.opened ?? false);
                 <button
                     @click="isOpen = !isOpen"
                     :class="`
-                    flex justify-center items-center scale-[.6] shadow-md shadow-[rgb(0,220,130)]
+                    flex justify-center items-center scale-[.6] 
                     md:hover:bg-[rgb(0,220,130)] md:hover:text-[rgb(2,4,32)] transition-colors
                     absolute text-sm border border-[rgb(0,220,130)] text-[rgb(0,220,130)] rounded-md size-[31px] 
                     -top-[7px] -ml-[35px] ${!isOpen ? 'bg-[rgb(0,220,130)] text-[rgb(2,4,32)]' : 'bg-[rgb(2,4,32)]'}`"
