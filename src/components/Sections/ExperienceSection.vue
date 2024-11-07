@@ -9,7 +9,7 @@ import { experiences } from "@/data/experience";
 
         <div class="relative">
             <div
-                class="border-l-[1px] border-gray-400 absolute left-0 top-2 h-full"
+                class="border-l-[1px] border-[rgba(0,220,128,0.38)] absolute left-0 top-1 -ml-md h-full"
             ></div>
             <TheSection
                 v-for="(experience, index) in experiences"
@@ -18,7 +18,7 @@ import { experiences } from "@/data/experience";
             >
                 <div class="text-xs relative">
                     <div
-                        class="size-[7px] absolute bg-gray-600 top-1 -left-[23px] rounded-full"
+                        class="size-[7px] absolute bg-[rgb(0,220,130)] top-[5px] -ml-[23px] rounded-full"
                     ></div>
                     {{ experience.startDate }} -
                     {{ experience.endDate ?? "Present" }}
