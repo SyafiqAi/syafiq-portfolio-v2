@@ -8,23 +8,29 @@ const isOpen = ref(false);
 
 <template>
     <div>
-        <div class="text-xs relative">
-            <div
-                class="size-[7px] absolute bg-[rgb(0,220,130)] top-[5px] -ml-[23px] rounded-full"
-            ></div>
-            {{ props.experience.startDate }} -
-            {{ props.experience.endDate ?? "Present" }}
+        <div class="mb-4">
+            <div class="text-xs relative mb-1">
+                <div
+                    class="size-[7px] absolute bg-[rgb(0,220,130)] top-[5px] -ml-[23px] rounded-full"
+                ></div>
+                {{ props.experience.startDate }} -
+                {{ props.experience.endDate ?? "Present" }}
+            </div>
+            <p class="font-bold text-lg">{{ props.experience.position }}</p>
+            <a
+                :href="props.experience.website"
+                class="mb-2 text-sm sm:text-base"
+            >
+                {{ props.experience.company }}
+            </a>
         </div>
-        <h3>{{ props.experience.position }}</h3>
-        <ul>
-            <li class="mb-2 text-sm sm:text-base">
-                <a :href="props.experience.website">
-                    {{ props.experience.company }}
-                </a>
-            </li>
-            <div v-if="props.experience.content.length > 3">
+        <div>
+            <ul v-if="props.experience.content.length > 3">
                 <li
-                    v-for="(item, index) in props.experience.content.slice(0,1)"
+                    v-for="(item, index) in props.experience.content.slice(
+                        0,
+                        3,
+                    )"
                     :key="index + item"
                     class="mb-2 text-sm sm:text-base"
                 >
@@ -32,18 +38,23 @@ const isOpen = ref(false);
                 </li>
                 <TheAccordion :is-open="isOpen">
                     <li
-                        v-for="(item, index) in props.experience.content.slice(1)"
+                        v-for="(item, index) in props.experience.content.slice(
+                            3,
+                        )"
                         :key="index + item"
                         class="mb-2 text-sm sm:text-base"
                     >
                         {{ item }}
                     </li>
                 </TheAccordion>
-                <button @click="isOpen = !isOpen" class="text-sm underline hover:no-underline text-gray-600">
+                <button
+                    @click="isOpen = !isOpen"
+                    class="text-sm underline hover:no-underline"
+                >
                     {{ isOpen ? "Hide" : "Show more" }}
                 </button>
-            </div>
-            <div v-else>
+            </ul>
+            <ul v-else>
                 <li
                     v-for="(item, index) in props.experience.content"
                     :key="index + item"
@@ -51,8 +62,8 @@ const isOpen = ref(false);
                 >
                     {{ item }}
                 </li>
-            </div>
-        </ul>
+            </ul>
+        </div>
     </div>
 </template>
 
