@@ -13,9 +13,9 @@
         @apply text-xl font-bold my-[10px] text-[rgb(226,232,240)];
     }
     a {
-        @apply text-[rgb(0,220,130)] underline hover:no-underline font-normal;
+        @apply text-[rgb(0,220,130)] underline hover:no-underline;
     }
     body {
-        @apply bg-[rgb(2,4,32)] text-[rgb(207,213,222)] font-light;
+        @apply bg-[rgb(2,4,32)] text-[rgb(207,213,222)];
     }
 }
