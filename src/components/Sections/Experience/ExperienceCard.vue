@@ -10,7 +10,7 @@ const isOpen = ref(false);
     <div>
         <div class="text-xs relative">
             <div
-                class="size-[7px] absolute bg-gray-600 top-[5px] -ml-[23px] rounded-full"
+                class="size-[7px] absolute bg-[rgb(0,220,130)] top-[5px] -ml-[23px] rounded-full"
             ></div>
             {{ props.experience.startDate }} -
             {{ props.experience.endDate ?? "Present" }}
