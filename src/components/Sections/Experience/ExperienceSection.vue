@@ -15,6 +15,7 @@ import ExperienceCard from "./ExperienceCard.vue";
                 :key="index"
                 :class="index !== 0 && `relative mt-sectionCard`"
                 :experience="experience"
+                :opened="index === 0"
             />
         </div>
     </TheSection>

@@ -2,21 +2,35 @@
 import { ref } from "vue";
 import { type Experience } from "./data/experience";
 import TheAccordion from "@/common/TheAccordion.vue";
-const props = defineProps<{ experience: Experience }>();
-const isOpen = ref(false);
+const props = defineProps<{ experience: Experience; opened?: boolean }>();
+const isOpen = ref(props.opened ?? false);
 </script>
 
 <template>
     <div>
         <div class="mb-4">
             <div class="text-xs relative mb-1">
-                <div
-                    class="size-[7px] absolute bg-[rgb(0,220,130)] top-[5px] -ml-[23px] rounded-full"
-                ></div>
+                <button
+                    @click="isOpen = !isOpen"
+                    :class="`
+                    flex justify-center items-center scale-[.6] shadow-md shadow-[rgb(0,220,130)]
+                    md:hover:bg-[rgb(0,220,130)] md:hover:text-[rgb(2,4,32)] transition-colors
+                    absolute text-sm border border-[rgb(0,220,130)] text-[rgb(0,220,130)] rounded-md size-[31px] 
+                    -top-[7px] -ml-[35px] ${!isOpen ? 'bg-[rgb(0,220,130)] text-[rgb(2,4,32)]' : 'bg-[rgb(2,4,32)]'}`"
+                >
+                    <div
+                        :class="`flex justify-center scale-125 
+                    ${isOpen ? 'rotate-90' : 'rotate-0'} transition-transform duration-500 `"
+                    >
+                        &#x276F;
+                    </div>
+                </button>
                 {{ props.experience.startDate }} -
                 {{ props.experience.endDate ?? "Present" }}
             </div>
-            <p class="font-bold text-lg">{{ props.experience.position }}</p>
+            <div class="font-bold text-lg flex justify-between">
+                <p>{{ props.experience.position }}</p>
+            </div>
             <a
                 :href="props.experience.website"
                 class="mb-2 text-sm sm:text-base"
@@ -25,46 +39,29 @@ const isOpen = ref(false);
             </a>
         </div>
         <div>
-            <ul v-if="props.experience.content.length > 3">
-                <li
-                    v-for="(item, index) in props.experience.content.slice(
-                        0,
-                        3,
-                    )"
-                    :key="index + item"
-                    class="mb-2 text-sm sm:text-base"
-                >
-                    {{ item }}
-                </li>
-                <TheAccordion :is-open="isOpen">
+            <TheAccordion :is-open="isOpen">
+                <ul>
                     <li
-                        v-for="(item, index) in props.experience.content.slice(
-                            3,
-                        )"
+                        v-for="(item, index) in props.experience.content"
                         :key="index + item"
                         class="mb-2 text-sm sm:text-base"
                     >
-                        {{ item }}
+                    <div class="flex gap-2">
+                        <div class="size-1 mt-2 bg-green-500 rounded-full flex-shrink-0"></div>
+                        <div>{{ item }}</div>
+                    </div>
                     </li>
-                </TheAccordion>
-                <button
-                    @click="isOpen = !isOpen"
-                    class="text-sm underline hover:no-underline"
-                >
-                    {{ isOpen ? "Hide" : "Show more" }}
-                </button>
-            </ul>
-            <ul v-else>
-                <li
-                    v-for="(item, index) in props.experience.content"
-                    :key="index + item"
-                    class="mb-2 text-sm sm:text-base"
-                >
-                    {{ item }}
-                </li>
-            </ul>
+                </ul>
+            </TheAccordion>
         </div>
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+/* button {
+    border: 1px solid rgb(0,220,130);
+    border-radius: 5px;
+    padding: 3px;
+
+} */
+</style>
