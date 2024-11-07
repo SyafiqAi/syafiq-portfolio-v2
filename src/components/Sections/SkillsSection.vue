@@ -5,11 +5,11 @@ import { skills } from "@/data/skills";
 
 <template>
     <TheSection title="Skills">
-        <div class="grid grid-cols-2">
-            <span v-for="(skill, index) in skills" :key="index + skill">
+        <ul class="columns-2">
+            <li v-for="(skill, index) in skills" :key="index + skill">
                 {{ skill }}
-            </span>
-        </div>
+            </li>
+        </ul>
     </TheSection>
 </template>
 
