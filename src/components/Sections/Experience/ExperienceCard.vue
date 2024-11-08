@@ -7,7 +7,7 @@ const isOpen = ref(props.opened ?? false);
 </script>
 
 <template>
-    <div>
+    <div class="border-[1px] border-[rgb(0,220,130,0.5)] rounded-lg p-[19px]">
         <div class="mb-4">
             <div class="text-xs relative mb-1">
                 <button
@@ -47,10 +47,12 @@ const isOpen = ref(props.opened ?? false);
                         :key="index + item"
                         class="mb-2 text-sm sm:text-base"
                     >
-                    <div class="flex gap-2">
-                        <div class="size-1 mt-2 md:mt-[11px] bg-green-500 rounded-full flex-shrink-0"></div>
-                        <div>{{ item }}</div>
-                    </div>
+                        <div class="flex gap-2">
+                            <div
+                                class="size-1 mt-2 md:mt-[11px] bg-green-500 rounded-full flex-shrink-0"
+                            ></div>
+                            <div>{{ item }}</div>
+                        </div>
                     </li>
                 </ul>
             </TheAccordion>
