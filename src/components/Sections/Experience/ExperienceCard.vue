@@ -4,6 +4,9 @@ import { type Experience } from "./data/experience";
 import TheAccordion from "@/common/TheAccordion.vue";
 const props = defineProps<{ experience: Experience }>();
 const isOpen = ref(false);
+
+const firstThreeExperienceContents = props.experience.content.slice(0,3);
+const theRestOfTheExperienceContents = props.experience.content.slice(3);
 </script>
 
 <template>
@@ -25,22 +28,17 @@ const isOpen = ref(false);
             </a>
         </div>
         <div>
-            <ul v-if="props.experience.content.length > 3">
+            <ul>
                 <li
-                    v-for="(item, index) in props.experience.content.slice(
-                        0,
-                        3,
-                    )"
+                    v-for="(item, index) in firstThreeExperienceContents"
                     :key="index + item"
                     class="mb-2 text-sm sm:text-base"
                 >
                     {{ item }}
                 </li>
-                <TheAccordion :is-open="isOpen">
+                <TheAccordion :is-open="isOpen" v-if="theRestOfTheExperienceContents.length > 0">
                     <li
-                        v-for="(item, index) in props.experience.content.slice(
-                            3,
-                        )"
+                        v-for="(item, index) in theRestOfTheExperienceContents"
                         :key="index + item"
                         class="mb-2 text-sm sm:text-base"
                     >
@@ -48,20 +46,12 @@ const isOpen = ref(false);
                     </li>
                 </TheAccordion>
                 <button
+                    v-if="theRestOfTheExperienceContents.length > 0"
                     @click="isOpen = !isOpen"
                     class="text-sm underline hover:no-underline"
                 >
                     {{ isOpen ? "Hide" : "Show more" }}
                 </button>
-            </ul>
-            <ul v-else>
-                <li
-                    v-for="(item, index) in props.experience.content"
-                    :key="index + item"
-                    class="mb-2 text-sm sm:text-base"
-                >
-                    {{ item }}
-                </li>
             </ul>
         </div>
     </div>
