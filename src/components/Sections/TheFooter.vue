@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const currentYear = new Date().getFullYear()
+</script>
 
 <template>
     <div
@@ -11,7 +13,7 @@
             </a>
         </span>
         <span><a href="https://github.com/SyafiqAi">GitHub</a></span>
-        <span> &#169; 2024 Syafiq Aiman </span>
+        <span> &#169; {{ currentYear }} Syafiq Aiman </span>
     </div>
 </template>
 
