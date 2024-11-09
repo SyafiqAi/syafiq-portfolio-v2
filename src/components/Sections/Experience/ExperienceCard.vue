@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import { type Experience } from "./data/experience";
 import TheAccordion from "@/common/TheAccordion.vue";
-import ExperienceCardListItem from "./ExperienceCardListItem.vue";
+import ExperienceCardListItem from "../../../common/GreenListItem.vue";
 const props = defineProps<{ experience: Experience }>();
 const isOpen = ref(false);
 
