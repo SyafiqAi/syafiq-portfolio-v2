@@ -5,7 +5,7 @@ const { title } = defineProps<{ title?: string }>();
 <template>
     <section class="mb-section">
         <h2 v-if="!!title">{{ title }}</h2>
-        <div class="ml-md">
+        <div class="mx-md">
             <slot></slot>
         </div>
     </section>
