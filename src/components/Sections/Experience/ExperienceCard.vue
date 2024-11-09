@@ -18,7 +18,7 @@ const theRestOfTheExperienceContents = props.experience.content.slice(3);
         <div class="mb-4">
             <div class="text-xs relative mb-1">
                 <div
-                    class="absolute h-full items-center justify-center w-0 -ml-[19.5px]"
+                    class="absolute h-full items-center justify-center w-0 -ml-[31.5px]"
                 >
                     <div
                         class="size-[10px] bg-[rgb(0,220,130)] rounded-full flex-shrink-0 absolute top-0 translate-y-[40%] left-0 -translate-x-[50%]"
