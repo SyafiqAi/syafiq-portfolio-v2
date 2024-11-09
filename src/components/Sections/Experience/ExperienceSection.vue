@@ -8,7 +8,7 @@ import ExperienceCard from "./ExperienceCard.vue";
     <TheSection title="Experience">
         <div class="relative mx-md">
             <div
-                class="border-l-[1px] border-[rgb(47,117,88)] absolute left-0 top-[5px] -ml-md h-[calc(100%-5px)]"
+                class="border-l-[1px] border-neonGreen-300 absolute left-0 top-[5px] -ml-md h-[calc(100%-5px)]"
             ></div>
             <ExperienceCard
                 v-for="(experience, index) in experiences"

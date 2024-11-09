@@ -21,7 +21,7 @@ const theRestOfTheExperienceContents = props.experience.content.slice(3);
                     class="absolute h-full items-center justify-center w-0 -ml-[31.5px]"
                 >
                     <div
-                        :class="`size-[10px] border-[1px] border-[rgb(0,220,130)] ${isPresentExperience ? 'bg-[rgb(0,220,130)]' : 'bg-[rgb(2,4,32)]'} rounded-full flex-shrink-0 absolute top-0 translate-y-[40%] left-0 -translate-x-[50%]`"
+                        :class="`size-[10px] border-[1px] border-neonGreen-500 ${isPresentExperience ? 'bg-neonGreen-500' : 'bg-darkBlue'} rounded-full flex-shrink-0 absolute top-0 translate-y-[40%] left-0 -translate-x-[50%]`"
                     />
                 </div>
                 {{ props.experience.startDate }} -
