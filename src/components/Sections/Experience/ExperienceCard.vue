@@ -3,7 +3,10 @@ import { ref } from "vue";
 import { type Experience } from "./data/experience";
 import TheAccordion from "@/common/TheAccordion.vue";
 import ExperienceCardListItem from "../../../common/GreenListItem.vue";
-const props = defineProps<{ experience: Experience }>();
+const props = defineProps<{
+    experience: Experience;
+    isPresentExperience: boolean;
+}>();
 const isOpen = ref(false);
 
 const firstThreeExperienceContents = props.experience.content.slice(0, 3);
@@ -14,10 +17,17 @@ const theRestOfTheExperienceContents = props.experience.content.slice(3);
     <div>
         <div class="mb-4">
             <div class="text-xs relative mb-1">
-                <div class="absolute h-full items-center justify-center w-0 -ml-[19.5px]">
+                <div
+                    class="absolute h-full items-center justify-center w-0 -ml-[19.5px]"
+                >
                     <div
                         class="size-[10px] bg-[rgb(0,220,130)] rounded-full flex-shrink-0 absolute top-0 translate-y-[40%] left-0 -translate-x-[50%]"
-                    ></div>
+                        v-if="isPresentExperience"
+                    />
+                    <div
+                        class="size-[10px] border-[1px] border-green-500 bg-[rgb(2,4,32)] rounded-full flex-shrink-0 absolute top-0 translate-y-[2px] left-0 -translate-x-[50%]"
+                        v-else
+                    />
                 </div>
                 {{ props.experience.startDate }} -
                 {{ props.experience.endDate ?? "Present" }}
