@@ -15,7 +15,7 @@ import TheFooter from "@/components/Sections/TheFooter.vue";
             <SkillsSection />
             <EducationSection />
         </main>
-        <hr class="my-section" />
+        <hr class="my-section opacity-20" />
         <footer>
             <TheFooter />
         </footer>
