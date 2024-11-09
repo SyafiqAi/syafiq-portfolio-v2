@@ -8,7 +8,7 @@ import { education } from "@/data/education";
         <div
             v-for="(ed, index) in education"
             :key="index + ed.university"
-            :class="index !== 0 && `relative mt-sectionCard`"
+            class="relative mb-sectionCard gap-1 flex flex-col *:w-fit"
         >
             <p class="text-xs">{{ ed.date }}</p>
             <p>{{ ed.level }}</p>
