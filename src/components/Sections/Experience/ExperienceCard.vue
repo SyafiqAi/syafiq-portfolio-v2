@@ -2,10 +2,11 @@
 import { ref } from "vue";
 import { type Experience } from "./data/experience";
 import TheAccordion from "@/common/TheAccordion.vue";
+import ExperienceCardListItem from "./ExperienceCardListItem.vue";
 const props = defineProps<{ experience: Experience }>();
 const isOpen = ref(false);
 
-const firstThreeExperienceContents = props.experience.content.slice(0,3);
+const firstThreeExperienceContents = props.experience.content.slice(0, 3);
 const theRestOfTheExperienceContents = props.experience.content.slice(3);
 </script>
 
@@ -29,21 +30,24 @@ const theRestOfTheExperienceContents = props.experience.content.slice(3);
         </div>
         <div>
             <ul>
-                <li
+                <ExperienceCardListItem
                     v-for="(item, index) in firstThreeExperienceContents"
                     :key="index + item"
                     class="mb-2 text-sm sm:text-base"
                 >
                     {{ item }}
-                </li>
-                <TheAccordion :is-open="isOpen" v-if="theRestOfTheExperienceContents.length > 0">
-                    <li
+                </ExperienceCardListItem>
+                <TheAccordion
+                    :is-open="isOpen"
+                    v-if="theRestOfTheExperienceContents.length > 0"
+                >
+                    <ExperienceCardListItem
                         v-for="(item, index) in theRestOfTheExperienceContents"
                         :key="index + item"
                         class="mb-2 text-sm sm:text-base"
                     >
                         {{ item }}
-                    </li>
+                    </ExperienceCardListItem>
                 </TheAccordion>
                 <button
                     v-if="theRestOfTheExperienceContents.length > 0"
