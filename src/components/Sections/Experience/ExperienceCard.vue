@@ -25,7 +25,7 @@ const theRestOfTheExperienceContents = props.experience.content.slice(3);
                         v-if="isPresentExperience"
                     />
                     <div
-                        class="size-[10px] border-[1px] border-green-500 bg-[rgb(2,4,32)] rounded-full flex-shrink-0 absolute top-0 translate-y-[2px] left-0 -translate-x-[50%]"
+                        class="size-[10px] border-[1px] border-green-500 bg-[rgb(2,4,32)] rounded-full flex-shrink-0 absolute top-0 translate-y-[40%] left-0 -translate-x-[50%]"
                         v-else
                     />
                 </div>
