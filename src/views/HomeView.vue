@@ -9,7 +9,10 @@ import TheFooter from "@/components/Sections/TheFooter.vue";
 <template>
     <div class="mx-auto sm px-10 pt-8 max-w-[640px]">
         <main>
-            <h1>Syafiq's Portfolio</h1>
+            <h1 class="border-l-8 border-l-neonGreen-500 pl-6">
+                Syafiq's <br />
+                Portfolio
+            </h1>
             <p class="mb-[30px]">I do web stuff.</p>
             <ExperienceSection />
             <SkillsSection />

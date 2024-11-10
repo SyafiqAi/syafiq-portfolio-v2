@@ -4,7 +4,7 @@
 
 @layer base {
     h1 {
-        @apply text-3xl font-bold my-[30px] text-offWhite-1;
+        @apply text-5xl font-bold my-[30px] text-offWhite-1;
     }
     h2 {
         @apply text-2xl font-bold my-[20px] text-offWhite-1;
