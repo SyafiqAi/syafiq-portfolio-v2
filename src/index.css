@@ -16,6 +16,6 @@
         @apply text-neonGreen-500 underline hover:no-underline;
     }
     body {
-        @apply bg-darkerGreen bg-gradient-to-b from-darkGreen to-darkerGreen text-offWhite-2;
+        @apply bg-darkerGreen bg-gradient-to-br from-darkGreen to-darkerGreen text-offWhite-2;
     }
 }
