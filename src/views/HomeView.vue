@@ -15,7 +15,7 @@ import TitleSection from "@/components/Sections/TitleSection.vue";
             <SkillsSection />
             <EducationSection />
         </main>
-        <hr class="my-section opacity-20" />
+        <hr class="opacity-20" />
         <footer>
             <TheFooter />
         </footer>

@@ -4,6 +4,7 @@ export default {
     theme: {
         extend: {
             margin: { md: "2rem", sectionCard: "3.5rem", section: "5rem" },
+            padding: { md: "2rem", sectionCard: "3.5rem", section: "5rem" },
             colors: {
                 neonGreen: {
                     300: "rgb(47,117,88)",
