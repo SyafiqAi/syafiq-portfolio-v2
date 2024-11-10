@@ -26,13 +26,11 @@ const rf: Experience = {
     position: "Front-end Web Developer",
     website: "https://rflaiyon.com/",
     content: [
-        "React.js",
-        "Education Sector",
         "Front-end development using React, Next.js.",
+        "Contributed to the development of a textbook management system for the public education sector.",
         "Worked closely with back-end developers to integrate RESTful APIs.",
         "Learned authorisation using JWT.",
         "CI/CD development.",
-        "Contributed to the development of a textbook management system for the public education sector.",
         "Self-learned React, Next.js, Node.js, Laravel.",
     ],
 };
@@ -45,11 +43,9 @@ const dsm: Experience = {
     position: "Front-end Web Developer",
     website: "https://www.dsm.com.my/",
     content: [
-        "Vue.js",
-        "Logistics",
-        "Front-end development using Vue.js. ",
-        "Worked in a team of 7 developers in an agile development method using Microsoft Azure (DevOps).",
+        "Front-end development using Vue.js.",
         "Contributed to the development of an ERP suite for trucking companies.",
+        "Worked in a team of 7 developers in an agile development method using Microsoft Azure (DevOps).",
         "Exposure to CI/CD development.",
         "Self-learned Vue.js, Nuxt.js.",
     ],
