@@ -44,10 +44,12 @@ const theRestOfTheExperienceContents = props.experience.content.slice(3);
                 >
                     {{ item }}
                 </ExperienceCardListItem>
-                <TheAccordion
-                    :is-open="isOpen"
-                    v-if="theRestOfTheExperienceContents.length > 0"
-                >
+            </ul>
+            <TheAccordion
+                :is-open="isOpen"
+                v-if="theRestOfTheExperienceContents.length > 0"
+            >
+                <ul>
                     <ExperienceCardListItem
                         v-for="(item, index) in theRestOfTheExperienceContents"
                         :key="index + item"
@@ -55,15 +57,15 @@ const theRestOfTheExperienceContents = props.experience.content.slice(3);
                     >
                         {{ item }}
                     </ExperienceCardListItem>
-                </TheAccordion>
-                <button
-                    v-if="theRestOfTheExperienceContents.length > 0"
-                    @click="isOpen = !isOpen"
-                    class="text-sm underline hover:no-underline"
-                >
-                    {{ isOpen ? "Hide" : "Show more" }}
-                </button>
-            </ul>
+                </ul>
+            </TheAccordion>
+            <button
+                v-if="theRestOfTheExperienceContents.length > 0"
+                @click="isOpen = !isOpen"
+                class="text-sm underline hover:no-underline"
+            >
+                {{ isOpen ? "Hide" : "Show more" }}
+            </button>
         </div>
     </div>
 </template>
