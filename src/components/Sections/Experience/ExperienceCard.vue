@@ -9,8 +9,9 @@ const props = defineProps<{
 }>();
 const isOpen = ref(false);
 
-const firstThreeExperienceContents = props.experience.content.slice(0, 3);
-const theRestOfTheExperienceContents = props.experience.content.slice(3);
+const itemsToShow = 2;
+const firstThreeExperienceContents = props.experience.content.slice(0, itemsToShow);
+const theRestOfTheExperienceContents = props.experience.content.slice(itemsToShow);
 </script>
 
 <template>
