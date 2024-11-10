@@ -13,7 +13,7 @@ import { education } from "@/data/education";
             <p class="text-xs">{{ ed.date }}</p>
             <p>{{ ed.level }}</p>
             <p class="font-bold">{{ ed.program }}</p>
-            <a>{{ ed.university }}</a>
+            <a :href="ed.website">{{ ed.university }}</a>
         </div>
     </TheSection>
 </template>

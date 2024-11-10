@@ -3,6 +3,7 @@ interface Education {
     level: string;
     program: string;
     date: string;
+    website: string;
 }
 
 const utar: Education = {
@@ -10,6 +11,7 @@ const utar: Education = {
     level: "B.Sc. (Hons)",
     program: "Applied Mathematics with Computing",
     date: "2020 - 2024",
+    website: "https://www.utar.edu.my/",
 };
 
 const uniten: Education = {
@@ -17,6 +19,7 @@ const uniten: Education = {
     level: "Diploma",
     program: "Mechanical Engineering",
     date: "2018 - 2020",
+    website: "https://www.uniten.edu.my/",
 };
 
 const education = [utar, uniten];
