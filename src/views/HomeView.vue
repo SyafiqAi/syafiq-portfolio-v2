@@ -1,24 +1,25 @@
 <script setup lang="ts">
-import TheEducation from "@/components/TheEducation/TheEducation.vue";
-import TheExperience from "@/components/TheExperience/TheExperience.vue";
-import TheFooter from "@/components/TheFooter.vue";
-import TheName from "@/components/TheName/TheName.vue";
-import TheTechnologies from "@/components/TheTechnologies/TheTechnologies.vue";
+import "@/assets/main.css";
+import EducationSection from "@/components/Sections/EducationSection.vue";
+import ExperienceSection from "@/components/Sections/Experience/ExperienceSection.vue";
+import SkillsSection from "@/components/Sections/SkillsSection.vue";
+import TheFooter from "@/components/Sections/TheFooter.vue";
+import TitleSection from "@/components/Sections/TitleSection.vue";
 </script>
 
 <template>
-    <div>
-        <main class="relative">
-            <aside>
-                <!-- <SideContacts /> -->
-            </aside>
-            <TheName />
-            <TheTechnologies />
-            <TheExperience />
-            <TheEducation />
+    <div class="mx-auto sm px-10 pt-8 max-w-[640px]">
+        <main>
+            <TitleSection />
+            <ExperienceSection />
+            <SkillsSection />
+            <EducationSection />
         </main>
-        <footer class="mt-28">
+        <hr class="opacity-20" />
+        <footer>
             <TheFooter />
         </footer>
     </div>
 </template>
+
+<style lang="postcss"></style>

@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-5xl font-bold my-[30px] text-offWhite-1;
+    }
+    h2 {
+        @apply text-4xl font-bold my-[20px] text-offWhite-1;
+    }
+    h3 {
+        @apply text-xl font-bold my-[10px] text-offWhite-1;
+    }
+    a {
+        @apply text-neonGreen-500 underline hover:no-underline;
+    }
+    body {
+        @apply bg-darkerGreen bg-gradient-to-br from-darkGreen to-darkerGreen text-offWhite-2;
+    }
+}
