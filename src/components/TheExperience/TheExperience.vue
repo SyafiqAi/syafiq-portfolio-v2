@@ -57,7 +57,7 @@ const alphaRedExperience: Experience = {
     companyWebsiteUrl: "https://www.alphareds.com/",
 };
 
-const experiences = [alphaRedExperience, rfLaiyonExperience, dsmExperience];
+const experiences = [rfLaiyonExperience, dsmExperience];
 </script>
 
 <template>
