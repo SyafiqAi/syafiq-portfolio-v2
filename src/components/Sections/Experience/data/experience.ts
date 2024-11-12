@@ -8,12 +8,12 @@ export interface Experience {
     website: string;
 }
 
-const alphaRed: Experience = {
+const ars: Experience = {
     company: "Alpha Red Solutions",
     startDate: "Nov 2024",
     // endDate: ,
     duration: "",
-    content: ["Node.js", "Fintech"],
+    content: ["Back-end Development using Node.js"],
     position: "Back-end Web Developer",
     website: "https://www.alphareds.com/",
 };
@@ -52,7 +52,7 @@ const dsm: Experience = {
 };
 
 const experiences = [
-    // alphaRed,
+    ars,
     rf,
     dsm,
 ];
