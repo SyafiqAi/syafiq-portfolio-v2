@@ -1,17 +1,10 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import { type Experience } from "./data/experience";
-import TheAccordion from "@/common/TheAccordion.vue";
 import ExperienceCardListItem from "../../../common/GreenListItem.vue";
 const props = defineProps<{
     experience: Experience;
     isPresentExperience: boolean;
 }>();
-const isOpen = ref(false);
-
-const itemsToShow = 2;
-const firstThreeExperienceContents = props.experience.content.slice(0, itemsToShow);
-const theRestOfTheExperienceContents = props.experience.content.slice(itemsToShow);
 </script>
 
 <template>
@@ -39,34 +32,13 @@ const theRestOfTheExperienceContents = props.experience.content.slice(itemsToSho
         <div>
             <ul>
                 <ExperienceCardListItem
-                    v-for="(item, index) in firstThreeExperienceContents"
+                    v-for="(item, index) in props.experience.content"
                     :key="index + item"
                     class="mb-2 text-sm sm:text-base"
                 >
                     {{ item }}
                 </ExperienceCardListItem>
             </ul>
-            <TheAccordion
-                :is-open="isOpen"
-                v-if="theRestOfTheExperienceContents.length > 0"
-            >
-                <ul>
-                    <ExperienceCardListItem
-                        v-for="(item, index) in theRestOfTheExperienceContents"
-                        :key="index + item"
-                        class="mb-2 text-sm sm:text-base"
-                    >
-                        {{ item }}
-                    </ExperienceCardListItem>
-                </ul>
-            </TheAccordion>
-            <button
-                v-if="theRestOfTheExperienceContents.length > 0"
-                @click="isOpen = !isOpen"
-                class="text-sm underline hover:no-underline"
-            >
-                {{ isOpen ? "Hide" : "Show more" }}
-            </button>
         </div>
     </div>
 </template>
