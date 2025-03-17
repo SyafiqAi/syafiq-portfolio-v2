@@ -1,6 +1,8 @@
 const skills = [
     "JavaScript",
     "TypeScript",
+    "Hono.js",
+    "ElysiaJS",
     "Next.js",
     "React.js",
     "Vue.js",
